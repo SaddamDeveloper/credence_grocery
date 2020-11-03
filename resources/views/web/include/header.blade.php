@@ -34,13 +34,7 @@
           </form>
         </div>
       </li>
-      <li><a href="index.html">Home</a>
-        <ul>
-          <li><a href="index.html">BigStart - Handbag</a></li>
-          <li><a href="Version2/index.html">BigStart - Fashion</a></li>
-          <li><a href="Version3/index.html">BigStart - Handbag V2</a></li>
-        </ul>
-      </li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="#">Pages</a>
         <ul>
           <li><a href="shop_grid.html"><span>Shop Grid</span></a>
@@ -205,12 +199,6 @@
               <!-- End Header Logo --> 
             </div>
             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-1">
-              <div class="jtv-top-cart-box hidden-xs"> 
-                <!-- Top Wishlist -->
-                <div class="mini-cart">
-                  <div class="basket1"> <a href="wishlist.php"> <span class="cart_count">2</span></a> </div>
-                </div>
-              </div>
               <div class="jtv-top-cart-box"> 
                 <!-- Top Cart -->
                 <div class="mini-cart">
@@ -254,6 +242,12 @@
                   </div>
                 </div>
               </div>
+              <div class="jtv-top-cart-box hidden-xs"> 
+                <!-- Top Wishlist -->
+                <div class="mini-cart">
+                  <div class="basket1"> <a href="wishlist.php"> <span class="cart_count">2</span></a> </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -276,7 +270,7 @@
                 <div class="jtv-menu-block-wrapper2">
                   <div class="nav-block jtv-nav-block-center">
                     <ul class="level0">
-                      <li class="parent item"> <a href="shop_grid.html"><span>Leather Laptop</span></a>
+                      <li class="parent item">
                         <ul class="level1">
                           <li> <a href="shop_grid.html"><span>Hobo Bag</span></a> </li>
                           <li> <a href="shop_grid.html"><span>Fabric Bag</span></a> </li>
@@ -284,7 +278,7 @@
                           <li> <a href="shop_grid.html"><span>Laptop Bga</span></a> </li>
                         </ul>
                       </li>
-                      <li class="parent item"> <a href="shop_grid.html"><span>Brandvilla NewYork</span></a>
+                      <li class="parent item">
                         <ul class="level1">
                           <li> <a href="shop_grid.html"><span>Print Laptop Bag</span></a> </li>
                           <li> <a href="shop_grid.html"><span>Office Bag</span></a> </li>
@@ -292,7 +286,7 @@
                           <li> <a href="shop_grid.html"><span>leather totes</span></a> </li>
                         </ul>
                       </li>
-                      <li class="parent item"> <a href="shop_grid.html"><span>Blue Laptop Bag </span></a>
+                      <li class="parent item"> 
                         <ul class="level1">
                           <li> <a href="shop_grid.html"><span>leather totes</span></a> </li>
                           <li> <a href="shop_grid.html"><span>Office Bag </span></a> </li>
@@ -300,7 +294,7 @@
                           <li> <a href="shop_grid.html"><span>WallyBags</span></a> </li>
                         </ul>
                       </li>
-                      <li class="parent item"> <a href="shop_grid.html"><span>Clownfish Synthetic</span></a>
+                      <li class="parent item">
                         <ul class="level1">
                           <li> <a href="shop_grid.html"><span>Clutches bag</span></a> </li>
                           <li> <a href="shop_grid.html"><span>Genuine bag </span></a> </li>
@@ -308,7 +302,7 @@
                           <li> <a href="shop_grid.html"><span>Leather Bags</span></a> </li>
                         </ul>
                       </li>
-                      <li class="parent item"> <a href="shop_grid.html"><span>Tara Vintage </span></a>
+                      <li class="parent item">
                         <ul class="level1">
                           <li> <a href="shop_grid.html"><span>Crossbody Bag</span></a> </li>
                           <li> <a href="shop_grid.html"><span>Clutch Handbag</span></a> </li>
@@ -316,7 +310,7 @@
                           <li> <a href="shop_grid.html"><span>Saddle Bag</span></a> </li>
                         </ul>
                       </li>
-                      <li class="parent item"> <a href="shop_grid.html"><span>Goatter Denim</span></a>
+                      <li class="parent item">
                         <ul class="level1">
                           <li> <a href="shop_grid.html"><span>Toaster Crossbody</span></a> </li>
                           <li> <a href="shop_grid.html"><span>Piper Bag</span></a> </li>
@@ -334,7 +328,7 @@
                 <div class="jtv-menu-block-wrapper2">
                   <div class="nav-block jtv-nav-block-center">
                     <ul class="level0">
-                      <li class="parent item"> <a href="shop_grid.html"><span>Leather Laptop</span></a>
+                      <li class="parent item">
                         <ul class="level1">
                           <li> <a href="shop_grid.html"><span>Hobo Bag</span></a> </li>
                           <li> <a href="shop_grid.html"><span>Fabric Bag</span></a> </li>
@@ -342,7 +336,7 @@
                           <li> <a href="shop_grid.html"><span>Laptop Bga</span></a> </li>
                         </ul>
                       </li>
-                      <li class="parent item"> <a href="shop_grid.html"><span>Brandvilla NewYork</span></a>
+                      <li class="parent item">
                         <ul class="level1">
                           <li> <a href="shop_grid.html"><span>Print Laptop Bag</span></a> </li>
                           <li> <a href="shop_grid.html"><span>Office Bag</span></a> </li>
@@ -350,7 +344,7 @@
                           <li> <a href="shop_grid.html"><span>leather totes</span></a> </li>
                         </ul>
                       </li>
-                      <li class="parent item"> <a href="shop_grid.html"><span>Blue Laptop Bag </span></a>
+                      <li class="parent item"> 
                         <ul class="level1">
                           <li> <a href="shop_grid.html"><span>leather totes</span></a> </li>
                           <li> <a href="shop_grid.html"><span>Office Bag </span></a> </li>
@@ -358,7 +352,7 @@
                           <li> <a href="shop_grid.html"><span>WallyBags</span></a> </li>
                         </ul>
                       </li>
-                      <li class="parent item"> <a href="shop_grid.html"><span>Clownfish Synthetic</span></a>
+                      <li class="parent item">
                         <ul class="level1">
                           <li> <a href="shop_grid.html"><span>Clutches bag</span></a> </li>
                           <li> <a href="shop_grid.html"><span>Genuine bag </span></a> </li>
@@ -366,7 +360,7 @@
                           <li> <a href="shop_grid.html"><span>Leather Bags</span></a> </li>
                         </ul>
                       </li>
-                      <li class="parent item"> <a href="shop_grid.html"><span>Tara Vintage </span></a>
+                      <li class="parent item">
                         <ul class="level1">
                           <li> <a href="shop_grid.html"><span>Crossbody Bag</span></a> </li>
                           <li> <a href="shop_grid.html"><span>Clutch Handbag</span></a> </li>
@@ -374,7 +368,7 @@
                           <li> <a href="shop_grid.html"><span>Saddle Bag</span></a> </li>
                         </ul>
                       </li>
-                      <li class="parent item"> <a href="shop_grid.html"><span>Goatter Denim</span></a>
+                      <li class="parent item">
                         <ul class="level1">
                           <li> <a href="shop_grid.html"><span>Toaster Crossbody</span></a> </li>
                           <li> <a href="shop_grid.html"><span>Piper Bag</span></a> </li>
@@ -392,7 +386,7 @@
                 <div class="jtv-menu-block-wrapper2">
                   <div class="nav-block jtv-nav-block-center">
                     <ul class="level0">
-                      <li class="parent item"> <a href="shop_grid.html"><span>Leather Laptop</span></a>
+                      <li class="parent item">
                         <ul class="level1">
                           <li> <a href="shop_grid.html"><span>Hobo Bag</span></a> </li>
                           <li> <a href="shop_grid.html"><span>Fabric Bag</span></a> </li>
@@ -400,7 +394,7 @@
                           <li> <a href="shop_grid.html"><span>Laptop Bga</span></a> </li>
                         </ul>
                       </li>
-                      <li class="parent item"> <a href="shop_grid.html"><span>Brandvilla NewYork</span></a>
+                      <li class="parent item">
                         <ul class="level1">
                           <li> <a href="shop_grid.html"><span>Print Laptop Bag</span></a> </li>
                           <li> <a href="shop_grid.html"><span>Office Bag</span></a> </li>
@@ -408,7 +402,7 @@
                           <li> <a href="shop_grid.html"><span>leather totes</span></a> </li>
                         </ul>
                       </li>
-                      <li class="parent item"> <a href="shop_grid.html"><span>Blue Laptop Bag </span></a>
+                      <li class="parent item"> 
                         <ul class="level1">
                           <li> <a href="shop_grid.html"><span>leather totes</span></a> </li>
                           <li> <a href="shop_grid.html"><span>Office Bag </span></a> </li>
@@ -416,7 +410,7 @@
                           <li> <a href="shop_grid.html"><span>WallyBags</span></a> </li>
                         </ul>
                       </li>
-                      <li class="parent item"> <a href="shop_grid.html"><span>Clownfish Synthetic</span></a>
+                      <li class="parent item">
                         <ul class="level1">
                           <li> <a href="shop_grid.html"><span>Clutches bag</span></a> </li>
                           <li> <a href="shop_grid.html"><span>Genuine bag </span></a> </li>
@@ -424,7 +418,7 @@
                           <li> <a href="shop_grid.html"><span>Leather Bags</span></a> </li>
                         </ul>
                       </li>
-                      <li class="parent item"> <a href="shop_grid.html"><span>Tara Vintage </span></a>
+                      <li class="parent item">
                         <ul class="level1">
                           <li> <a href="shop_grid.html"><span>Crossbody Bag</span></a> </li>
                           <li> <a href="shop_grid.html"><span>Clutch Handbag</span></a> </li>
@@ -432,7 +426,7 @@
                           <li> <a href="shop_grid.html"><span>Saddle Bag</span></a> </li>
                         </ul>
                       </li>
-                      <li class="parent item"> <a href="shop_grid.html"><span>Goatter Denim</span></a>
+                      <li class="parent item">
                         <ul class="level1">
                           <li> <a href="shop_grid.html"><span>Toaster Crossbody</span></a> </li>
                           <li> <a href="shop_grid.html"><span>Piper Bag</span></a> </li>
@@ -450,7 +444,7 @@
                 <div class="jtv-menu-block-wrapper2">
                   <div class="nav-block jtv-nav-block-center">
                     <ul class="level0">
-                      <li class="parent item"> <a href="shop_grid.html"><span>Leather Laptop</span></a>
+                      <li class="parent item">
                         <ul class="level1">
                           <li> <a href="shop_grid.html"><span>Hobo Bag</span></a> </li>
                           <li> <a href="shop_grid.html"><span>Fabric Bag</span></a> </li>
@@ -458,7 +452,7 @@
                           <li> <a href="shop_grid.html"><span>Laptop Bga</span></a> </li>
                         </ul>
                       </li>
-                      <li class="parent item"> <a href="shop_grid.html"><span>Brandvilla NewYork</span></a>
+                      <li class="parent item">
                         <ul class="level1">
                           <li> <a href="shop_grid.html"><span>Print Laptop Bag</span></a> </li>
                           <li> <a href="shop_grid.html"><span>Office Bag</span></a> </li>
@@ -466,7 +460,7 @@
                           <li> <a href="shop_grid.html"><span>leather totes</span></a> </li>
                         </ul>
                       </li>
-                      <li class="parent item"> <a href="shop_grid.html"><span>Blue Laptop Bag </span></a>
+                      <li class="parent item"> 
                         <ul class="level1">
                           <li> <a href="shop_grid.html"><span>leather totes</span></a> </li>
                           <li> <a href="shop_grid.html"><span>Office Bag </span></a> </li>
@@ -474,7 +468,7 @@
                           <li> <a href="shop_grid.html"><span>WallyBags</span></a> </li>
                         </ul>
                       </li>
-                      <li class="parent item"> <a href="shop_grid.html"><span>Clownfish Synthetic</span></a>
+                      <li class="parent item">
                         <ul class="level1">
                           <li> <a href="shop_grid.html"><span>Clutches bag</span></a> </li>
                           <li> <a href="shop_grid.html"><span>Genuine bag </span></a> </li>
@@ -482,7 +476,7 @@
                           <li> <a href="shop_grid.html"><span>Leather Bags</span></a> </li>
                         </ul>
                       </li>
-                      <li class="parent item"> <a href="shop_grid.html"><span>Tara Vintage </span></a>
+                      <li class="parent item">
                         <ul class="level1">
                           <li> <a href="shop_grid.html"><span>Crossbody Bag</span></a> </li>
                           <li> <a href="shop_grid.html"><span>Clutch Handbag</span></a> </li>
@@ -490,7 +484,7 @@
                           <li> <a href="shop_grid.html"><span>Saddle Bag</span></a> </li>
                         </ul>
                       </li>
-                      <li class="parent item"> <a href="shop_grid.html"><span>Goatter Denim</span></a>
+                      <li class="parent item">
                         <ul class="level1">
                           <li> <a href="shop_grid.html"><span>Toaster Crossbody</span></a> </li>
                           <li> <a href="shop_grid.html"><span>Piper Bag</span></a> </li>
@@ -503,7 +497,7 @@
                 </div>
               </div>
             </li>
-            <li class="mega-menu"> <a class="level-top" href="blog.html"><span>Grocery</span></a> </li>
+            <li class="mega-menu"> <a class="level-top" href="blog.html"><span>Fashion</span></a> </li>
             <li class="mega-menu"> <a class="level-top" href="blog.html"><span>Login</span></a> </li>
             <li class="mega-menu"> <a class="level-top" href="blog.html"><span>Register</span></a> </li>
             <li class="drop-menu"> <a href="#"> <span>My Account <i class="fa fa-angle-down"></i></span> </a>

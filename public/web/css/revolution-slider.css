@@ -116,8 +116,8 @@
 }
 #jtv-rev_slider_wrapper .info1 .jtv-shop-now-btn {
 	color: #fff;
-	border: 1px #ee2265 solid;
-	background: #ee2265; border-radius:3px;
+	border: 1px #327519 solid;
+	background: #327519; border-radius:3px;
 }
 #jtv-rev_slider_wrapper .info1 .jtv-shop-now-btn:hover {
 	background: #fff;
@@ -190,9 +190,9 @@
 	color: #EEE;
 	letter-spacing: 1.5px;
 	display: inline-block;
-	border: 1px #ee2265 solid;
+	border: 1px #327519 solid;
 	margin-top: 45px;
-	float: left; background-color:#ee2265;border-radius:3px;
+	float: left; background-color:#327519;border-radius:3px;
 }
 .jtv-shop-now-btn:hover {
 	background: #000;
@@ -370,8 +370,8 @@
 	opacity: 0;
 	background-size: 10px
 }
-.tp-leftarrow.default:hover{background: #ee2265 url(../images/left-a.png) no-repeat 13px 8px;background-size: 10px}
-.tp-rightarrow.default:hover{background: #ee2265 url(../images/right-a.png) no-repeat 13px 8px;background-size: 10px}
+.tp-leftarrow.default:hover{background: #327519 url(../images/left-a.png) no-repeat 13px 8px;background-size: 10px}
+.tp-rightarrow.default:hover{background: #327519 url(../images/right-a.png) no-repeat 13px 8px;background-size: 10px}
 #jtv-rev_slider_wrapper:hover .tp-rightarrow.default {
 	opacity: 1
 }

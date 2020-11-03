@@ -1,6 +1,10 @@
-﻿@extends('web.template.web_master')
+﻿@extends('web.templet.master')
 
-@section('content')
+  @section('seo')
+    <meta name="description" content="Credence">
+  @endsection
+
+  @section('content')
     <!-- JTV Home Slider -->
     <div class="jtv-slideshow">
       <div class="container-fluid">
@@ -805,15 +809,9 @@
       </div>
     </section>    
 
-     <!-- Special Product slider -->  
-    <section class="special-products">
-      <div class="container">
-        <div class="grocery-banner">
-          <a href="">
-            <img src="web/images/apprisal/home-banner4.jpg">
-          </a>
-        </div>
-      </div>
-    </section>
-@endsection
+  @endsection
+
+  @section('script')
+  
+  @endsection
   
