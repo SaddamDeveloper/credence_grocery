@@ -21,6 +21,7 @@ Route::group(['namespace' => 'Admin'],function(){
             Route::get('status/{id}/{status}', 'CategoryController@categoryStatus')->name('admin.category_status');
             Route::get('edit/{id}', 'CategoryController@categoryEdit')->name('admin.category_edit');
             Route::put('update/{id}', 'CategoryController@categoryUpdate')->name('admin.category_update');
+            Route::get('to/homepage/{id}/{status}', 'CategoryController@toHomePage')->name('admin.to.homepage');
         });
 
         Route::group(['prefix'=>'sub/category'],function(){

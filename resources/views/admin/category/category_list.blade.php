@@ -47,8 +47,10 @@
                                           <a href="{{route('admin.category_status',['id'=>encrypt($item->id),'status'=>2])}}" class="btn btn-sm btn-danger">Disable</a>
                                         @else
                                           <a href="{{route('admin.category_status',['id'=>encrypt($item->id),'status'=>1])}}" class="btn btn-sm btn-primary">Enable</a>
+                                          @endif
+                                        @if($item->is_in_homepage == '1')
+                                          <a href="{{route('admin.to.homepage',['id'=>encrypt($item->id),'status'=>2])}}" class="btn btn-sm btn-primary">Show to Hompage</a>
                                         @endif
-                                        
                                       </td>
                                     </tr>
                                 @endforeach

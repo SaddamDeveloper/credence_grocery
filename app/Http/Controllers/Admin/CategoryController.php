@@ -150,6 +150,21 @@ class CategoryController extends Controller
         }
     }
 
+    public function toHomePage($id, $status){
+        try {
+            $id = decrypt($id);
+        } catch (\Exception $e) {
+            abort(404);
+        }
+        Category::where('is_in_homepage', '=', 2)->update(array('is_in_homepage' => 1));
+        $category = Category::find($id) ;
+        $category->is_in_homepage = $status;
+        if($category->save()){
+            return redirect()->back()->with('message', 'Category Updated Successfully');
+        }else {
+            return redirect()->back()->with('error', 'Something Went Wrong');
+        }
+    }
 
     //////////////////////////////////Sub Category /////////////////////////////
 
