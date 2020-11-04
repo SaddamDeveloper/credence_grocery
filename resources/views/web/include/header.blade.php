@@ -256,260 +256,129 @@
     <!-- end header --> 
     
     <!-- Navigation -->  
-    <nav>
-      <div class="container-fluid">
-        <div class="mm-toggle-wrap">
-          <div class="mm-toggle"><i class="fa fa-align-justify"></i><span class="mm-label">Menu</span> </div>
+    <div class="desktop-nav">
+      <nav>
+        <div class="container">
+          <div class="mm-toggle-wrap">
+            <div class="mm-toggle"><i class="fa fa-align-justify"></i><span class="mm-label">Menu</span> </div>
+          </div>
+          <div class="nav-inner"> 
+            <!-- BEGIN NAV -->          
+            <ul class="menu">
+              <li>Shop by Category</li>
+              <li>
+                <h3>Books</h3>
+                <div>
+                  <h4>Books</h4>
+                  <span class="sub-menu">                    
+                    <ul>
+                      <li><a href="#">English</a></li>
+                      <li><a href="#">Dutch</a></li>
+                      <li><a href="#">German</a></li>
+                      <li><a href="#">French</a></li>
+                      <li><a href="#">Spanish</a></li>
+                      <li><a href="#">Turkish</a></li>
+                      <li><a href="#">Arabic</a></li>
+                    </ul>
+                  </span>
+                  <span class="sub-menu">     
+                    <img src="web/images/menu-img4.jpg" alt="">
+                  </span>
+                </div>
+              </li>
+              <li>
+                <h3>Computer & Electronics</h3>
+                <div>
+                  <h4>Books</h4>
+                  <span class="sub-menu">                    
+                    <ul>
+                      <li><a href="#">English</a></li>
+                      <li><a href="#">Dutch</a></li>
+                      <li><a href="#">German</a></li>
+                      <li><a href="#">French</a></li>
+                      <li><a href="#">Spanish</a></li>
+                      <li><a href="#">Turkish</a></li>
+                      <li><a href="#">Arabic</a></li>
+                      <li><a href="#">German</a></li>
+                      <li><a href="#">French</a></li>
+                      <li><a href="#">Spanish</a></li>
+                      <li><a href="#">Turkish</a></li>
+                      <li><a href="#">Arabic</a></li>
+                    </ul>
+                  </span>
+                  <span class="sub-menu">     
+                    <img src="web/images/menu-img3.jpg" alt="">
+                  </span>
+                </div>
+              </li>
+              <li>
+                <h3>Toys</h3>
+                <div>
+                  <h4>Brands</h4>
+                </div>
+              </li>	
+              <li>
+                <h3>Sport & Leisure</h3>
+                <div>
+                  <h4>Sport</h4>
+                </div>
+              </li>
+              <li>
+                <h3>Home & Cooking</h3>
+                <div>
+                  <h4>Cooking</h4>
+                </div>
+              </li>	
+              <li>
+                <h3>Garden & DIY</h3>
+                <div>
+                  <h4>Garden</h4>
+                </div>
+              </li>
+              
+              <li>
+                <h3>Computer & Electronics</h3>
+                <div>
+                  <h4>Smartphones</h4>
+                </div>
+              </li>
+              <li>
+                <h3>Toys</h3>
+                <div>
+                  <h4>Brands</h4>
+                </div>
+              </li>	
+              <li>
+                <h3>Sport & Leisure</h3>
+                <div>
+                  <h4>Sport</h4>
+                </div>
+              </li>
+              <li>
+                <h3>Home & Cooking</h3>
+                <div>
+                  <h4>Cooking</h4>
+                </div>
+              </li>	
+              <li>
+                <h3>Garden & DIY</h3>
+                <div>
+                  <h4>Garden</h4>
+                </div>
+              </li>
+              
+            </ul>
+            
+            <ul class="temp">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Fashion Store</a></li>
+              <li><a href="#">Login</a></li>
+              <li><a href="#">Register</a></li>
+              <li><a href="#"><i class="icon-user icons"></i>  Hello, Vishal</a></li>
+            </ul>
+
+          </div>
         </div>
-        <div class="nav-inner"> 
-          <!-- BEGIN NAV -->
-          <ul id="nav" class="hidden-xs">
-            <li class="drop-menu"><a href="index.html" class="level-top active"><span>Home</span></a></li>            
-            <li class="mega-menu"> <a class="level-top" href="shop_grid.html"><span>Appsial</span></a>
-              <div class="jtv-menu-block-wrapper">
-                <div class="jtv-menu-block-wrapper2">
-                  <div class="nav-block jtv-nav-block-center">
-                    <ul class="level0">
-                      <li class="parent item">
-                        <ul class="level1">
-                          <li> <a href="shop_grid.html"><span>Hobo Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Fabric Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Backpack Bga</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Laptop Bga</span></a> </li>
-                        </ul>
-                      </li>
-                      <li class="parent item">
-                        <ul class="level1">
-                          <li> <a href="shop_grid.html"><span>Print Laptop Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Office Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>shoulder bags</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>leather totes</span></a> </li>
-                        </ul>
-                      </li>
-                      <li class="parent item"> 
-                        <ul class="level1">
-                          <li> <a href="shop_grid.html"><span>leather totes</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Office Bag </span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Fabric Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>WallyBags</span></a> </li>
-                        </ul>
-                      </li>
-                      <li class="parent item">
-                        <ul class="level1">
-                          <li> <a href="shop_grid.html"><span>Clutches bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Genuine bag </span></a> </li>
-                          <li> <a href="shop_grid.html"><span>WallyBags </span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Leather Bags</span></a> </li>
-                        </ul>
-                      </li>
-                      <li class="parent item">
-                        <ul class="level1">
-                          <li> <a href="shop_grid.html"><span>Crossbody Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Clutch Handbag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Hobo Shoulder</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Saddle Bag</span></a> </li>
-                        </ul>
-                      </li>
-                      <li class="parent item">
-                        <ul class="level1">
-                          <li> <a href="shop_grid.html"><span>Toaster Crossbody</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Piper Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Leather Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Canvas Bag</span></a> </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="mega-menu"> <a class="level-top" href="shop_grid.html"><span>Cosmatics</span></a>
-              <div class="jtv-menu-block-wrapper">
-                <div class="jtv-menu-block-wrapper2">
-                  <div class="nav-block jtv-nav-block-center">
-                    <ul class="level0">
-                      <li class="parent item">
-                        <ul class="level1">
-                          <li> <a href="shop_grid.html"><span>Hobo Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Fabric Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Backpack Bga</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Laptop Bga</span></a> </li>
-                        </ul>
-                      </li>
-                      <li class="parent item">
-                        <ul class="level1">
-                          <li> <a href="shop_grid.html"><span>Print Laptop Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Office Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>shoulder bags</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>leather totes</span></a> </li>
-                        </ul>
-                      </li>
-                      <li class="parent item"> 
-                        <ul class="level1">
-                          <li> <a href="shop_grid.html"><span>leather totes</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Office Bag </span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Fabric Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>WallyBags</span></a> </li>
-                        </ul>
-                      </li>
-                      <li class="parent item">
-                        <ul class="level1">
-                          <li> <a href="shop_grid.html"><span>Clutches bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Genuine bag </span></a> </li>
-                          <li> <a href="shop_grid.html"><span>WallyBags </span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Leather Bags</span></a> </li>
-                        </ul>
-                      </li>
-                      <li class="parent item">
-                        <ul class="level1">
-                          <li> <a href="shop_grid.html"><span>Crossbody Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Clutch Handbag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Hobo Shoulder</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Saddle Bag</span></a> </li>
-                        </ul>
-                      </li>
-                      <li class="parent item">
-                        <ul class="level1">
-                          <li> <a href="shop_grid.html"><span>Toaster Crossbody</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Piper Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Leather Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Canvas Bag</span></a> </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="mega-menu"> <a class="level-top" href="shop_grid.html"><span>Perfume</span></a>
-              <div class="jtv-menu-block-wrapper">
-                <div class="jtv-menu-block-wrapper2">
-                  <div class="nav-block jtv-nav-block-center">
-                    <ul class="level0">
-                      <li class="parent item">
-                        <ul class="level1">
-                          <li> <a href="shop_grid.html"><span>Hobo Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Fabric Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Backpack Bga</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Laptop Bga</span></a> </li>
-                        </ul>
-                      </li>
-                      <li class="parent item">
-                        <ul class="level1">
-                          <li> <a href="shop_grid.html"><span>Print Laptop Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Office Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>shoulder bags</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>leather totes</span></a> </li>
-                        </ul>
-                      </li>
-                      <li class="parent item"> 
-                        <ul class="level1">
-                          <li> <a href="shop_grid.html"><span>leather totes</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Office Bag </span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Fabric Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>WallyBags</span></a> </li>
-                        </ul>
-                      </li>
-                      <li class="parent item">
-                        <ul class="level1">
-                          <li> <a href="shop_grid.html"><span>Clutches bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Genuine bag </span></a> </li>
-                          <li> <a href="shop_grid.html"><span>WallyBags </span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Leather Bags</span></a> </li>
-                        </ul>
-                      </li>
-                      <li class="parent item">
-                        <ul class="level1">
-                          <li> <a href="shop_grid.html"><span>Crossbody Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Clutch Handbag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Hobo Shoulder</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Saddle Bag</span></a> </li>
-                        </ul>
-                      </li>
-                      <li class="parent item">
-                        <ul class="level1">
-                          <li> <a href="shop_grid.html"><span>Toaster Crossbody</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Piper Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Leather Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Canvas Bag</span></a> </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="mega-menu"> <a class="level-top" href="shop_grid.html"><span>Kraft</span></a>
-              <div class="jtv-menu-block-wrapper">
-                <div class="jtv-menu-block-wrapper2">
-                  <div class="nav-block jtv-nav-block-center">
-                    <ul class="level0">
-                      <li class="parent item">
-                        <ul class="level1">
-                          <li> <a href="shop_grid.html"><span>Hobo Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Fabric Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Backpack Bga</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Laptop Bga</span></a> </li>
-                        </ul>
-                      </li>
-                      <li class="parent item">
-                        <ul class="level1">
-                          <li> <a href="shop_grid.html"><span>Print Laptop Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Office Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>shoulder bags</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>leather totes</span></a> </li>
-                        </ul>
-                      </li>
-                      <li class="parent item"> 
-                        <ul class="level1">
-                          <li> <a href="shop_grid.html"><span>leather totes</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Office Bag </span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Fabric Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>WallyBags</span></a> </li>
-                        </ul>
-                      </li>
-                      <li class="parent item">
-                        <ul class="level1">
-                          <li> <a href="shop_grid.html"><span>Clutches bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Genuine bag </span></a> </li>
-                          <li> <a href="shop_grid.html"><span>WallyBags </span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Leather Bags</span></a> </li>
-                        </ul>
-                      </li>
-                      <li class="parent item">
-                        <ul class="level1">
-                          <li> <a href="shop_grid.html"><span>Crossbody Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Clutch Handbag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Hobo Shoulder</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Saddle Bag</span></a> </li>
-                        </ul>
-                      </li>
-                      <li class="parent item">
-                        <ul class="level1">
-                          <li> <a href="shop_grid.html"><span>Toaster Crossbody</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Piper Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Leather Bag</span></a> </li>
-                          <li> <a href="shop_grid.html"><span>Canvas Bag</span></a> </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="mega-menu"> <a class="level-top" href="blog.html"><span>Fashion</span></a> </li>
-            <li class="mega-menu"> <a class="level-top" href="blog.html"><span>Login</span></a> </li>
-            <li class="mega-menu"> <a class="level-top" href="blog.html"><span>Register</span></a> </li>
-            <li class="drop-menu"> <a href="#"> <span>My Account <i class="fa fa-angle-down"></i></span> </a>
-              <ul>
-                <li> <a href="wishlist.html"> <span>Wishlist</span> </a> </li>
-                <li><a href="compare.html"><span>My Orders</span></a> </li>
-                <li><a href="quick_view.html"><span>My Profile</span></a> </li>
-                <li><a href="404error.html"><span>My Address</span></a> </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
     <!-- end nav --> 

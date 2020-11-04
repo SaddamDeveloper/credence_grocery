@@ -49,42 +49,6 @@
       </div>
     </div>  
 
-    <!-- our features -->
-    <div class="our-features-box hidden-xs">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3 col-xs-12 col-sm-6">
-            <div class="feature-box first"> <i class="icon-plane icons"></i>
-              <div class="content">
-                <h3>Delivery Across Many Area</h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 col-xs-12 col-sm-6">
-            <div class="feature-box"> <i class="icon-earphones-alt icons"></i>
-              <div class="content">
-                <h3>Support 24/7 For Clients</h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 col-xs-12 col-sm-6">
-            <div class="feature-box"> <i class="icon-like icons"></i>
-              <div class="content">
-                <h3>100% Satisfaction Guarantee</h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 col-xs-12 col-sm-6">
-            <div class="feature-box last"> <i class="icon-tag icons"></i>
-              <div class="content">
-                <h3>Great Deals Discount</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- Apprisal Slider -->
     <section>
       <div class="container">
@@ -93,112 +57,207 @@
             <div class="upsell-block">
               <div class="jtv-block-inner">
                 <div class="block-title">
-                  <h2>New Apprisal</h2>
+                  <h2>Grocery</h2>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-sm-6">
-                  <div>
-                    <img src="web/images/apprisal/home-banner1.jpg">
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="upsell-products-slider2 product-flexslider hidden-buttons">
-                    <div class="slider-items slider-width-col4 products-grid block-content">
-                      <div class="item" onclick="window.location='single_product.html';">
-                        <div class="item-inner">
-                          <div class="item-img">
-                            <div class="item-img-info"> <a href="#" class="product-image" title="Product Title Here" href="#"> <img alt="Product Title Here" src="web/images/products/img05.jpg"> </a>
-                            </div>
-                          </div>
-                          <div class="item-info">
-                            <div class="info-inner">
-                              <div class="item-title"> <a title="Product Title Here" href="#"> Product Title Here </a> </div>
-                              <div class="item-content">
-                                <div class="item-price">
-                                  <div class="price-box"> <span class="regular-price"> <span class="price">$225.00</span> </span> </div>
-                                </div>
-                                <div class="action">
-                                  <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
-                                  <button class="button btn-cart" type="button" title="" data-original-title="Add to Cart"><span>Add to Cart</span> </button>
-                                </div>
-                              </div>
-                            </div>
+              <div class="category-products">
+                <ul class="products-grid row">
+                  <li class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                    <div class="item">
+                      <div class="item-inner">
+                        <div class="item-img">
+                          <div class="item-img-info"> <a class="product-image" title="Product Title Here" href="#"> <img alt="Product Title Here" src="web/images/products/img06.jpg"> </a>
                           </div>
                         </div>
-                      </div>
-                      <div class="item">
-                        <div class="item-inner">
-                          <div class="item-img">
-                            <div class="item-img-info"> <a class="product-image" title="Product Title Here" href="#"> <img alt="Product Title Here" src="web/images/products/img06.jpg"> </a>
-                            </div>
-                          </div>
-                          <div class="item-info">
-                            <div class="info-inner">
-                              <div class="item-title"> <a title="Product Title Here" href="#"> Product Title Here </a> </div>
-                              <div class="item-content">
-                                <div class="item-price">
-                                  <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
-                                </div>
-                                <div class="action">
-                                  <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
-                                  <button class="button btn-cart" type="button" title="" data-original-title="Add to Cart"><span>Add to Cart</span> </button>
-                                </div>
+                        <div class="item-info">
+                          <div class="info-inner">
+                            <div class="item-title"> <a title="Product Title Here" href="#"> Product Title Here </a> </div>
+                            <div class="item-content">
+                              <div class="item-price">
+                                <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
                               </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="item">
-                        <div class="item-inner">
-                          <div class="item-img">
-                            <div class="item-img-info"> <a class="product-image" title="Product Title Here" href="#"> <img alt="Product Title Here" src="web/images/products/img05.jpg"> </a>
-                            </div>
-                          </div>
-                          <div class="item-info">
-                            <div class="info-inner">
-                              <div class="item-title"> <a title="Product Title Here" href="#"> Product Title Here </a> </div>
-                              <div class="item-content">
-                                <div class="item-price">
-                                  <div class="price-box">
-                                    <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> $156.00 </span> </p>
-                                    <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> $167.00 </span> </p>
-                                  </div>
-                                </div>
-                                <div class="action">
-                                  <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
-                                  <button class="button btn-cart" type="button" title="" data-original-title="Add to Cart"><span>Add to Cart</span> </button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="item">
-                        <div class="item-inner">
-                          <div class="item-img">
-                            <div class="item-img-info"> <a class="product-image" title="Product Title Here" href="#"> <img alt="Product Title Here" src="web/images/products/img06.jpg"> </a>
-                            </div>
-                          </div>
-                          <div class="item-info">
-                            <div class="info-inner">
-                              <div class="item-title"> <a title="Product Title Here" href="#"> Product Title Here </a> </div>
-                              <div class="item-content">
-                                <div class="item-price">
-                                  <div class="price-box"> <span class="regular-price"> <span class="price">$225.00</span> </span> </div>
-                                </div>
-                                <div class="action">
-                                  <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
-                                  <button class="button btn-cart" type="button" title="" data-original-title="Add to Cart"><span>Add to Cart</span> </button>
-                                </div>
+                              <div class="action">
+                                <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
+                                <button class="button btn-cart" type="button" title="" data-original-title="Add to Cart"><span>Add to Cart</span> </button>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
+                  </li>
+                  <li class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                    <div class="item">
+                      <div class="item-inner">
+                        <div class="item-img">
+                          <div class="item-img-info"> <a class="product-image" title="Product Title Here" href="#"> <img alt="Product Title Here" src="web/images/products/img02.jpg"> </a>
+                          </div>
+                        </div>
+                        <div class="item-info">
+                          <div class="info-inner">
+                            <div class="item-title"> <a title="Product Title Here" href="#"> Product Title Here </a> </div>
+                            <div class="item-content">
+                              <div class="item-price">
+                                <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
+                              </div>
+                              <div class="action">
+                                <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
+                                <button class="button btn-cart" type="button" title="" data-original-title="Add to Cart"><span>Add to Cart</span> </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                    <div class="item">
+                      <div class="item-inner">
+                        <div class="item-img">
+                          <div class="item-img-info"> <a class="product-image" title="Product Title Here" href="#"> <img alt="Product Title Here" src="web/images/products/img03.jpg"> </a>
+                          </div>
+                        </div>
+                        <div class="item-info">
+                          <div class="info-inner">
+                            <div class="item-title"> <a title="Product Title Here" href="#"> Product Title Here </a> </div>
+                            <div class="item-content">
+                              <div class="item-price">
+                                <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
+                              </div>
+                              <div class="action">
+                                <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
+                                <button class="button btn-cart" type="button" title="" data-original-title="Add to Cart"><span>Add to Cart</span> </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                    <div class="item">
+                      <div class="item-inner">
+                        <div class="item-img">
+                          <div class="item-img-info"> <a class="product-image" title="Product Title Here" href="#"> <img alt="Product Title Here" src="web/images/products/img01.jpg"> </a>
+                          </div>
+                        </div>
+                        <div class="item-info">
+                          <div class="info-inner">
+                            <div class="item-title"> <a title="Product Title Here" href="#"> Product Title Here </a> </div>
+                            <div class="item-content">
+                              <div class="item-price">
+                                <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
+                              </div>
+                              <div class="action">
+                                <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
+                                <button class="button btn-cart" type="button" title="" data-original-title="Add to Cart"><span>Add to Cart</span> </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                    <div class="item">
+                      <div class="item-inner">
+                        <div class="item-img">
+                          <div class="item-img-info"> <a class="product-image" title="Product Title Here" href="#"> <img alt="Product Title Here" src="web/images/products/img06.jpg"> </a>
+                          </div>
+                        </div>
+                        <div class="item-info">
+                          <div class="info-inner">
+                            <div class="item-title"> <a title="Product Title Here" href="#"> Product Title Here </a> </div>
+                            <div class="item-content">
+                              <div class="item-price">
+                                <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
+                              </div>
+                              <div class="action">
+                                <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
+                                <button class="button btn-cart" type="button" title="" data-original-title="Add to Cart"><span>Add to Cart</span> </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                    <div class="item">
+                      <div class="item-inner">
+                        <div class="item-img">
+                          <div class="item-img-info"> <a class="product-image" title="Product Title Here" href="#"> <img alt="Product Title Here" src="web/images/products/img02.jpg"> </a>
+                          </div>
+                        </div>
+                        <div class="item-info">
+                          <div class="info-inner">
+                            <div class="item-title"> <a title="Product Title Here" href="#"> Product Title Here </a> </div>
+                            <div class="item-content">
+                              <div class="item-price">
+                                <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
+                              </div>
+                              <div class="action">
+                                <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
+                                <button class="button btn-cart" type="button" title="" data-original-title="Add to Cart"><span>Add to Cart</span> </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                    <div class="item">
+                      <div class="item-inner">
+                        <div class="item-img">
+                          <div class="item-img-info"> <a class="product-image" title="Product Title Here" href="#"> <img alt="Product Title Here" src="web/images/products/img03.jpg"> </a>
+                          </div>
+                        </div>
+                        <div class="item-info">
+                          <div class="info-inner">
+                            <div class="item-title"> <a title="Product Title Here" href="#"> Product Title Here </a> </div>
+                            <div class="item-content">
+                              <div class="item-price">
+                                <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
+                              </div>
+                              <div class="action">
+                                <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
+                                <button class="button btn-cart" type="button" title="" data-original-title="Add to Cart"><span>Add to Cart</span> </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                    <div class="item">
+                      <div class="item-inner">
+                        <div class="item-img">
+                          <div class="item-img-info"> <a class="product-image" title="Product Title Here" href="#"> <img alt="Product Title Here" src="web/images/products/img01.jpg"> </a>
+                          </div>
+                        </div>
+                        <div class="item-info">
+                          <div class="info-inner">
+                            <div class="item-title"> <a title="Product Title Here" href="#"> Product Title Here </a> </div>
+                            <div class="item-content">
+                              <div class="item-price">
+                                <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
+                              </div>
+                              <div class="action">
+                                <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
+                                <button class="button btn-cart" type="button" title="" data-original-title="Add to Cart"><span>Add to Cart</span> </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item col-12">
+                    <button type="submit" title="Submit" class="button button-clear"><span>View all</span></button>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
