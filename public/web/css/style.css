@@ -343,8 +343,8 @@ a.button:hover {
 	vertical-align: middle;
 	text-align: center;
 	display: inline-block;
-	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 .header-top {
 	padding: 0px 0px 8px 0px;
@@ -1041,7 +1041,8 @@ nav {
 	margin: auto;
 	width: 100%;
 	z-index: 99;
-	background: #fff;
+	background: #327519;
+    padding: 7px 0;
 }
 .nav {
 	margin: 0px auto 0

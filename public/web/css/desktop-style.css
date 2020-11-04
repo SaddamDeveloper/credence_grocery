@@ -1,0 +1,229 @@
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.menu a {
+  display: block;
+  padding: .2rem 0;
+  color: #000;
+  font-size: 16px;
+  text-decoration: none;
+}
+.menu a:hover {
+  color: #51b5d6;
+  text-decoration: underline;
+}
+
+.menu h4 {
+  margin: .5rem 0 .75rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid #ddd;
+  font-size: 20px;
+  font-weight: 700;
+  color: #327519;
+  text-transform: uppercase;
+}
+
+.menu h5 {
+  margin: 0;
+  margin-bottom: .5rem;
+  font-size: 16px;
+}
+
+nav::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.menu {
+  display: inline-block;
+  border-radius: .2rem;
+  position: absolute;
+  z-index: 2;
+  padding: 0 0 12px;
+}
+.menu:hover {
+  border: 1px solid #323d61;
+  position: absolute;
+  background: #fff;
+  width: 72.8%;
+}
+.menu:hover > li {
+  display: block;
+}
+.menu:hover > li:first-child {
+  border-color: transparent;
+  border-bottom: none;
+  border-radius: .2rem .2rem 0 0;
+  background-color: #eee;
+  box-shadow: none;
+  position: relative;
+  z-index: 1;
+  color: #444;
+  cursor: default;
+}
+.menu:hover > li:first-child::after {
+  content: '\f106';
+}
+.menu:hover > li:last-child {
+  border-radius: 0 0 .2rem .2rem;
+}
+.menu:hover + .temp::after {
+  display: block;
+}
+.menu > li {
+  display: none;
+  width: 20rem;
+  margin: 0;
+  border-right: 1px solid #bbb;
+}
+.menu > li:first-child {
+  display: block;
+  padding: .65rem;
+  border: 1px solid #ffffff;
+  border-radius: .20rem;
+  background: #ffffff;
+  color: #327519;
+  font-weight: 300;
+  font-size: 1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 200px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  border-radius: 30px;
+  outline: none;
+}
+.menu > li:first-child::after {
+  content: '\f107';
+  float: right;
+  font: 900 1rem fontAwesome;
+  color: #327519;
+  font-size: 17px;
+}
+.menu > li:not(:first-child):hover {
+  width: calc(1100px - 6rem);
+  border-right: none;
+}
+.menu > li:nth-child(2):hover::before {
+  content: '';
+  display: block;
+  width: 12rem;
+  height: 3rem;
+  border: 1px solid transparent;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+.menu li h3 {
+  width: 20rem;
+  margin: 0;
+  padding: .65rem .75rem;
+  border: 1px solid transparent;
+  border-width: 1px 0;
+  background: #fff;
+  position: relative;
+  z-index: 10;
+  font-size: 16px;
+  font-weight: normal;
+  cursor: default;
+}
+.menu li:last-child h3 {
+  border-radius: 0 0 .2rem .2rem;
+  color: darkred;
+}
+.menu li:last-child:hover h3 {
+  border-bottom-color: transparent;
+  border-radius: 0 0 0 .2rem;
+}
+.menu li:hover h3 {
+  width: calc(20rem + 1px);
+  border-color: #bbb;
+}
+.menu li:hover div {
+  display: block;
+}
+.menu li div {
+  display: none;
+  width: calc(960px - 6rem - 12rem);
+  padding: 1rem 1.2rem;
+  border-left: 1px solid #bbb;
+  border-radius: 0 .2rem .2rem 0;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20rem;
+  z-index: 1;
+}
+
+.temp {
+  width: 75%;
+  border-radius: .2rem;
+  float: left;
+  font-size: .875rem;
+  margin-bottom: 0;
+  padding-left: 27%;
+}
+.temp::after {
+  content: '';
+  display: none;
+  background: rgba(0, 0, 0, 0.35);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.temp li {
+  padding: 4px 15px 0;
+  -webkit-box-flex: 1;
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  list-style: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  float: left;
+}
+.temp a {
+  color:#fff;
+  font-size: 15px;
+  line-height: 2.2;
+}
+
+main {
+  display: -webkit-box;
+  display: flex;
+  width: 100%;
+  height: 15rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #ccc;
+  position: relative;
+  z-index: 1;
+  clear: both;
+}
+main p {
+  margin: auto;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.sub-menu {
+  width: 50%;
+  float: left;
+}
+.sub-menu ul li {
+  width: 50%;
+  float: left;
+}
+
+@media (max-width: 60rem) {
+  .temp {
+    width: 67%;
+  }
+}
