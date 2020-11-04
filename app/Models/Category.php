@@ -18,6 +18,10 @@ class Category extends Model
         return $this->hasMany('App\Models\SubCategory','category_id',$this->primaryKey);
     }
 
+    public function product()
+    {
+        return $this->belongsTo('App\Model\Product', 'category_id', $this->primaryKey);
+    }
     // public function productSubCategory()
     // {
     //     return $this->hasMany('App\Models\Product','sub_category_id',$this->primaryKey);
