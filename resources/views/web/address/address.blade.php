@@ -24,29 +24,49 @@
                             </div>                            
                             <div class="col2-set" id="select-address">
                               <h5 class="text-center">Saved Address</h5>
-                              @if (!empty($address) && (count($address) > 0))
-                                @foreach ($address as $key => $item)
-                                <div class="col-1">
-                                  <div class="single-address flex">
-                                    <div class="single-address-content">
-                                      <p>{{ $item->name }}</p>
-                                      <p>{{ $item->address }}</p>
-                                      <p>{{ $item->city }}, {{ $item->state }}</p>
-                                      <p>Pincode: {{ $item->pin_code }}</p>
-                                      <p>Phone: {{ $item->mobile_no }} | Email: {{ $item->email }}</p>
-                                      <a href="{{ route('web.edit_address', ['address_id' => $item->id]) }}" title="">EDIT THIS ADDRESS</a>
-                                    </div>
+                              <div class="col-1">
+                                <div class="single-address flex">
+                                  <div class="single-address-content">
+                                    <p>Vishal Nag</p>
+                                    <p>784, Rose Garden, Downtown</p>
+                                    <p>Guwahati, ASSAM</p>
+                                    <p>Pincode: 784125</p>
+                                    <p>Phone: 4565456233 | Email: im@vsishal.com</p>
+                                    <a href="edit-address.php" title="">EDIT THIS ADDRESS</a>
                                   </div>
                                 </div>
-                                @endforeach
-                              @endif
-                              <div class="manage_add" onclick="myFunction()"><h5 class="text-center" style="cursor: -webkit-grab; cursor: grab;">Add New Shipping Addresses</h5> </div>
+                              </div>
+                              <div class="col-1">
+                                <div class="single-address flex">
+                                  <div class="single-address-content">
+                                    <p>Vishal Nag</p>
+                                    <p>56B, XYZ Colony</p>
+                                    <p>Kolkata, WEST BENGAL</p>
+                                    <p>Pincode: 784125</p>
+                                    <p>Phone: 4565456233 | Email: im@vsishal.com</p>
+                                    <a href="edit-address.php" title="">EDIT THIS ADDRESS</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-1">
+                                <div class="single-address flex">
+                                  <div class="single-address-content">
+                                    <p>Vishal Nag</p>
+                                    <p>784, B town, Domvali</p>
+                                    <p>Mumbai, MAHARASTRA</p>
+                                    <p>Pincode: 784125</p>
+                                    <p>Phone: 4565456233 | Email: im@vsishal.com</p>
+                                    <a href="edit-address.php" title="">EDIT THIS ADDRESS</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="manage_add" onclick="myFunction()"><h5 class="text-center">Add New Shipping Addresses</h5> </div>
                             </div>
                             <div class="checkout-page" id="add-address" style="display: none;">
                               <h5 class="text-center">Add New Address</h5>   
                               <div class="box-border">
-                              <form method="POST" action="{{ route('web.add_address') }}" autocomplete="off">
-                                @csrf
+                              <form method="POST" action="#" autocomplete="off">
+                                <input type="hidden" name="_token" value="SbcrwxGNI8nsUjuCOLRqrFVYCwSHDcTxbYEnbBCi">
                                 <ul>
                                   <li class="row">
                                     <div class="col-sm-6">
@@ -76,7 +96,7 @@
                                   <li class="row">
                                     <div class="col-sm-6">
                                       <label for="telephone">Phone Number</label>
-                                      <input type="number" name="mobile_no" class="input form-control" id="telephone">
+                                      <input type="number" name="contact_no" class="input form-control" id="telephone">
                                       <span id="telephone_msg" style="color: red;"></span>
                                     </div>
                                     <!--/ [col] -->

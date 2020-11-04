@@ -9,17 +9,9 @@
   @section('content')
     <!-- JTV Home Slider -->
     <section class="main-container col2-left-layout">
-      <form action="{{ route('web.place_order') }}" method="POST" autocomplete="off">
-        @csrf
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-sm-9">
-              @if (Session::has('message'))
-                  <div class="alert alert-success text-center" >{{ Session::get('message') }}</div>
-              @endif
-              @if (Session::has('error'))
-                  <div class="alert alert-danger text-center">{{ Session::get('error') }}</div>
-              @endif
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-9">
             <article class="col-main" style="width: 100%;">              
               <div class="ordernav" style="padding-bottom: 0.8%;">
                   <ul>
@@ -39,34 +31,64 @@
                             </div>                            
                             <div class="col2-set" id="select-address">
                               <h5 class="text-center">Select Address</h5>
-                              @if (isset($all_address) && !empty($all_address))
-                              @foreach ($all_address as $address)
-                                <div class="col-1">
-                                  <div class="single-address flex">
-                                    <label class="radio-container">
-                                      <input type="radio" checked="checked" name="address_id" value="{{ $address->id }}">
-                                      <span class="checkmark"></span>
-                                    </label>
-                                    <div class="single-address-content">
-                                      <p>{{ $address->name }}</p>
-                                      <p>Phone: {{ $address->mobile_no }}</p>
-                                      <p>Email: {{ $address->email }}</p>
-                                      <p>City: {{ $address->city }}</p>
-                                      <p>State: {{ $address->state }}</p>
-                                      <p>{{ $address->address }}</p>
-                                      <p>Pincode: {{ $address->pin_code }}</p>
-                                    </div>
+                              <div class="col-1">
+                                <div class="single-address flex">
+                                  <label class="radio-container">
+                                    <input type="radio" checked="checked" name="address" value="9">
+                                    <span class="checkmark"></span>
+                                  </label>
+                                  <div class="single-address-content">
+                                    <p>Vishal Nag</p>
+                                    <p>guwahatil</p>
+                                    <p>Phone: 4565456233</p>
+                                    <p>Email: im@vsishal.com</p>
+                                    <p>sdasdasd, sdSDSDSD</p>
+                                    <p>Pincode: 784125</p>
+                                    <a href="edit-address.php" title="">EDIT THIS ADDRESS</a>
                                   </div>
                                 </div>
-                              @endforeach
-                              @endif
+                              </div>
+                              <div class="col-1">
+                                <div class="single-address flex">
+                                  <label class="radio-container">
+                                    <input type="radio" checked="checked" name="address" value="9">
+                                    <span class="checkmark"></span>
+                                  </label>
+                                  <div class="single-address-content">
+                                    <p>Vishal Nag</p>
+                                    <p>guwahatil</p>
+                                    <p>Phone: 4565456233</p>
+                                    <p>Email: im@vsishal.com</p>
+                                    <p>sdasdasd, sdSDSDSD</p>
+                                    <p>Pincode: 784125</p>
+                                    <a href="edit-address.php" title="">EDIT THIS ADDRESS</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-1">
+                                <div class="single-address flex">
+                                  <label class="radio-container">
+                                    <input type="radio" checked="checked" name="address" value="9">
+                                    <span class="checkmark"></span>
+                                  </label>
+                                  <div class="single-address-content">
+                                    <p>Vishal Nag</p>
+                                    <p>guwahatil</p>
+                                    <p>Phone: 4565456233</p>
+                                    <p>Email: im@vsishal.com</p>
+                                    <p>sdasdasd, sdSDSDSD</p>
+                                    <p>Pincode: 784125</p>
+                                    <a href="edit-address.php" title="">EDIT THIS ADDRESS</a>
+                                  </div>
+                                </div>
+                              </div>
                               <div class="manage_add" onclick="myFunction()"><h5 class="text-center">Add New Shipping Addresses</h5> </div>
                             </div>
                             <div class="checkout-page" id="add-address" style="display: none;">
                               <h5 class="text-center">Add New Address</h5>   
                               <div class="box-border">
-                              {{-- <form method="POST" action="{{ route('web.add_address') }}" autocomplete="off">
-                                @csrf --}}
+                              <form method="POST" action="" autocomplete="off">
+                                <input type="hidden" name="_token" value="SbcrwxGNI8nsUjuCOLRqrFVYCwSHDcTxbYEnbBCi">
                                 <ul>
                                   <li class="row">
                                     <div class="col-sm-6">
@@ -96,7 +118,7 @@
                                   <li class="row">
                                     <div class="col-sm-6">
                                       <label for="telephone">Phone Number</label>
-                                      <input type="number" name="mobile_no" class="input form-control" id="mobile_no">
+                                      <input type="number" name="contact_no" class="input form-control" id="telephone">
                                       <span id="telephone_msg" style="color: red;"></span>
                                     </div>
                                     <!--/ [col] -->
@@ -126,11 +148,11 @@
                                   </li>
                                   <!--/ .row -->
                                   <li>
-                                    <button onclick="myFunction()" type="button" class="button button1">Cancel</button>
+                                    <button onclick="myFunction()" class="button button1">Cancel</button>
                                     <button type="submit" class="button" id="address_btn">Continue</button>
                                   </li>
                                 </ul>
-                                {{-- </form> --}}
+                                </form>
                               </div>
                             </div>                            
                           </div>
@@ -141,22 +163,21 @@
             </article>
             <!--  ///*///======    End article  ========= //*/// --> 
           </div>
-          @if ((Cart::count() > 0) && !empty(Cart::content()))
           <div class="sidebar col-sm-3 col-xs-12">
             <aside class="sidebar">
               <div class="block-title" style="border-bottom: 0">PAYMENT INFORMATION</div>
               <div class="cartcalculation">
                 <div class="paymttotal">
                   <h4 style="text-align: left;">Cart Amount  </h4>
-                  <h4 style="text-align: right;" id="total">₹{{ Cart::subtotal() }}</h4>
+                  <h4 style="text-align: right;" id="total">880</h4>
                 </div>
                 <div class="paymttotal">
                   <h4 style="text-align: left;">Shipping  </h4>
-                  <h4 style="text-align: right;" id="total">0.00</h4>
+                  <h4 style="text-align: right;" id="total">30</h4>
                 </div>
                 <div class="paymttotal">
                   <h4 style="text-align: left;font-weight: 700">Grand Total </h4>
-                  <h4 style="text-align: right;font-weight: 700" id="total">₹{{ Cart::subtotal() }}</h4>
+                  <h4 style="text-align: right;font-weight: 700" id="total">910</h4>
                 </div>
 
                 <div class="paymtmthd">
@@ -173,16 +194,14 @@
                   </label> 
                 </div>                                    
                 <div class="paymttotal" style="float: right;margin-top: 10px">
-                    {{-- <button class="button button--aylen btn" type="button" name="checkout">Proceed to Checkout</button> --}}
-                    <input type="submit" class="button button--aylen btn" value="Proceed to Checkout">
+                    <a href="#" class="button button--aylen btn">Proceed to Checkout</a>
                 </div>
               </div>
             </aside>
           </div>
-          @endif
         </div>
       </div>
-    </form>
+    </section>
     </section>
        
   @endsection
@@ -233,7 +252,7 @@
                 var city = $('#city').val();
                 var state = $('#state').val();
                 $.ajax({
-                    url: "{{route('web.add_address')}}",
+                    url: "",
                     method: "POST",
                     data: {name: name, email: email, address: address, mobile_no: mobile_no, pin_code: pin_code, city: city, state: state},
                     success: function(data){
