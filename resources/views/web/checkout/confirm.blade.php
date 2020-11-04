@@ -54,12 +54,12 @@
                         <label style="font-weight: 700">Shipping</label>
                         <div class="single-address orderconfim">
                           <div class="single-address-content">
-                            <p>Name: {{ $address->name }}</p>
-                            <p>Address: {{ $address->address }} </p>
-                            <p>Email: {{ $address->email }} </p>
-                            <p>Mobile No: {{ $address->mobile_no }} </p>
-                            <p>City: {{ $address->city }} </p>
-                            <p>Pincode: {{ $address->pin_code }}</p>
+                            <p>Name: Vishal nag</p>
+                            <p>Address: Greenwood Lane, lalganesh </p>
+                            <p>Email: imvishalnag@gmail.com </p>
+                            <p>Mobile No: 7800154260 </p>
+                            <p>City: Guwahati </p>
+                            <p>Pincode: 781034</p>
                             <p></p>
                           </div>
                         </div>

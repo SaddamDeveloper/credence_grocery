@@ -55,22 +55,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero. Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. </p>
                       </div>
                       <div class="form-option">
-                        <p class="form-option-title">Available Options:</p>
-                        <div class="attributes">
-                          <div class="attribute-label">Color:</div>
-                          <div class="attribute-list">
-                            <ul class="list-color" id="list-color">
-                              <li class="col-sel color-sel">
-                                <span style="background:#db7878;"></span>
-                                <input type="radio" name="product_color_id" value="13" checked="" hidden="">
-                              </li>
-                              <li class="col-sel color-sel selected">
-                                <span style="background:#d91899;"></span>
-                                <input type="radio" name="product_color_id" value="14" hidden="">
-                              </li>
-                            </ul>
-                          </div>
-                        </div>                      
+                        <p class="form-option-title">Available Options:</p>                    
                         <div class="attributes">
                           <div class="attribute-label">Size:</div>
                           <div class="attribute-list">
@@ -116,7 +101,7 @@
                           </div>
                           <div class="email-addto-box">
                             <ul class="add-to-links">
-                              <li> <a class="link-wishlist" href="wishlist.html"><span>Add to Wishlist</span></a></li>
+                            <li> <a class="link-wishlist" href="{{route('web.cart.cart')}}"><span>Add to Wishlist</span></a></li>
                             </ul>
                           </div>
                         </div>
