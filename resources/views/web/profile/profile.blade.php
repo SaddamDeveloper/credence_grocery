@@ -17,21 +17,21 @@
                 <h2>My profile</h2>
               </div>
               <div class="static-contain">
-                <h2>{{ $my_account->name }}</h2><hr>
+                <h2>Vishal Nag</h2><hr>
                 <div class="row">
                   <div class="col-xs-6">
-                    <p><strong>Name : </strong>{{ $my_account->name }}</p> 
-                    <p><strong>Email : </strong>{{ $my_account->email }}</p> 
-                    <p><strong>Phone No : </strong>{{ $my_account->contact_no }}</p>
+                    <p><strong>Name : </strong>Vishal Nag</p> 
+                    <p><strong>Email : </strong>imvis@gmail.com</p> 
+                    <p><strong>Phone No : </strong>+91 94568 945125</p>
                   </div>
                   <div class="col-xs-12"><hr></div>
                   <div class="col-xs-6">
                     <label class="hidden-xs">You can edit your profile</label><br>
-                    <a href="{{route('web.edit_my_profile')}}" class="button button--aylen btn">EDIT PROFILE</a>
+                    <a href="{{route('web.profile.edit-profile')}}" class="button button--aylen btn">EDIT PROFILE</a>
                   </div>
                   <div class="col-xs-6">
                     <label class="hidden-xs">Check your saved shipping address</label><br>
-                    <a href="{{route('web.address_list')}}" class="button button--aylen btn">SAVED ADDRESS</a>
+                    <a href="{{route('web.address.address')}}" class="button button--aylen btn">SAVED ADDRESS</a>
                   </div>
                 </div>
               </div>
@@ -42,10 +42,10 @@
               <div class="block-title" style="padding-left: 13px;">Account </div>
               <div class="block-content">
                 <ol id="recently-viewed-items">
-                  <li class="item odd"><a href="{{ route('web.wish_list') }}">Wishlist</a></li>
+                  <li class="item odd"><a href="{{ route('web.wishlist.wishlist') }}">Wishlist</a></li>
                   <li class="item  odd"><a href="{{route('web.order.order')}}">My Orders</a></li>
-                  <li class="item odd"><a href="{{route('web.edit_my_profile')}}">Edit Profile</a></li>
-                  <li class="item odd"><a href="{{route('web.address_list')}}">My Address</a></li>
+                  <li class="item odd"><a href="{{route('web.profile.edit-profile')}}">Edit Profile</a></li>
+                  <li class="item odd"><a href="{{route('web.address.address')}}">My Address</a></li>
                   <li class="item last"><a href="{{route('web.profile.change-password')}}">Change password</a></li>
                 </ol>
               </div>

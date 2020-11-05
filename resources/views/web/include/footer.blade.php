@@ -2,56 +2,10 @@
       <div class="footer-inner">
         <div class="container">
           <div class="row">
-            <div class="col-sm-4 col-xs-12 col-md-3">
-              <div class="footer-links">
-                <h4>Useful links</h4>
-                <ul class="links">
-                  <li><a href="#" title="Product Recall">Product Recall</a></li>
-                  <li><a href="#" title="Gift Vouchers">Gift Vouchers</a></li>
-                  <li><a href="#" title="Returns &amp; Exchange">Returns &amp; Exchange</a></li>
-                  <li><a href="#" title="Shipping Options">Shipping Options</a></li>
-                  <li><a href="#" title="Help &amp; FAQs">Help &amp; FAQs</a></li>
-                  <li><a href="#" title="Order history">Order history</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-4 col-xs-12 col-md-3">
-              <div class="footer-links">
-                <h4>Service</h4>
-                <ul class="links">
-                  <li><a href="account_page.html">Account</a></li>
-                  <li><a href="wishlist.html">Wishlist</a></li>
-                  <li><a href="shopping_cart.html">Shopping Cart</a></li>
-                  <li><a href="#">Return Policy</a></li>
-                  <li><a href="#">Special</a></li>
-                  <li><a href="#">Lookbook</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-4 col-xs-12 col-md-2">
-              <div class="footer-links">
-                <h4>Information</h4>
-                <ul class="links">
-                  <li><a href="sitemap.html">Sites Map </a></li>
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">Trends</a></li>
-                  <li><a href="about_us.html">About Us</a></li>
-                  <li><a href="contact_us.html">Contact Us</a></li>
-                  <li><a href="#">My Orders</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-4">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
               <div class="footer-links">
                 <div class="footer-newsletter">
-                  <h4>Subscribe to our news</h4>
-                  <form id="newsletter-validate-detail" method="post" action="#">
-                    <div class="newsletter-inner">
-                      <p>Subscribe to be the first to know about Sales, Events, and Exclusive Offers!</p>
-                      <input class="newsletter-email" name='Email' placeholder='Enter Your Email'/>
-                      <button class="button subscribe" type="submit" title="Subscribe">Subscribe</button>
-                    </div>
-                  </form>
+                  <h1 style="font-size: 30px;color: #327519;font-weight: 900;">CREDENCE EVER LLPP</h1>
                 </div>
                 <div class="social">
                   <h4>Follow Us</h4>
@@ -72,13 +26,12 @@
       <div class="footer-bottom">
         <div class="container">
           <div class="row">
-            <div class="col-sm-5 col-xs-12 coppyright">Copyright © 2017 <a href="#"> Bigstart </a>. All Rights Reserved. </div>
+            <div class="col-sm-5 col-xs-12 coppyright">Copyright © 2020  <a href="#">CREDENCE EVER LLPP</a>  | All Rights Reserved. </div>
             <div class="col-sm-7 col-xs-12 payment-accept">
               <ul>
-                <li> <a href="#"><img src="{{ asset('web/images/payment-1.png') }}" alt="Payment Card"></a> </li>
-                <li> <a href="#"><img src="{{ asset('web/images/payment-2.png') }}" alt="Payment Card"></a> </li>
-                <li> <a href="#"><img src="{{ asset('web/images/payment-3.png') }}" alt="Payment Card"></a> </li>
-                <li> <a href="#"><img src="{{ asset('web/images/payment-4.png') }}" alt="Payment Card"></a> </li>
+                <li> <a href="#">Terms & Condition</a> </li>
+                <li> <a href="#">Privacy Policy</a> </li>
+                <li> <a href="#">Return Policy</a> </li>
               </ul>
             </div>
           </div>

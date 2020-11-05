@@ -17,13 +17,9 @@
                   <fieldset class="col2-set">
                       <div class="new-users"><strong>Register</strong>
                           <div class="content">
-
-                            @if(session()->has('msg'))
-                              <p style="font-weight: bolder; color: blue;">{{ session()->get('msg') }}</p>
-                            @else
-                                <p>If you don't have an account with us, please register in.</p>
-                            @endif 
-                            <form action="{{ route('web.registration') }}" autocomplete="off">
+                              <p style="font-weight: bolder; color: #f10000;">Somthing went wrong, please try again</p>
+                              <p>If you don't have an account with us, please register in.</p>
+                            <form action="{{ route('web.user.register') }}" autocomplete="off">
                               <ul class="form-list">
                                 <li>
                                     <div class="row">
@@ -83,7 +79,7 @@
                             </form>
                             <hr>
                             <p>If you have an account with us, please log in.</p>
-                            <a class="button login " href="{{ route('web.login') }}">LOGIN TO ACCOUNT</a>
+                            <a class="button login " href="{{ route('web.user.login') }}">LOGIN TO ACCOUNT</a>
                             </div>
                       </div>
                   </fieldset>

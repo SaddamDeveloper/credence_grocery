@@ -15,7 +15,7 @@
             <article class="col-main" style="width: 100%;">              
               <div class="ordernav" style="padding-bottom: 0.8%;">
                   <ul>
-                    <li style="border-color: #323d61"><div>Cart information</div></li>
+                    <li style="border-color: #327519"><div>Cart information</div></li>
                     <li class="step"><div>shipping information</div></li>
                     <li><div>Order confirmation</div></li>
                   </ul>

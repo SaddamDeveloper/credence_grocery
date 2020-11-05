@@ -13,12 +13,12 @@
           <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-4" style="margin: auto;">
-              <div class="account-login register-login" style="background: #fff">
+              <div class="account-login register-login">
                   <fieldset class="col2-set">
                       <div class="new-users"><strong>Forgot Password</strong>
                           <div class="content">
                               <p>If you have an account with us, please log in.</p>
-                              <form action="http://assamproducts.webinfotechghy.xyz/login" autocomplete="off" method="POST">
+                              <form action="" autocomplete="off" method="POST">
                                   <input type="hidden" name="_token" value="SbcrwxGNI8nsUjuCOLRqrFVYCwSHDcTxbYEnbBCi">
                                   <ul class="form-list">
                                       <li>

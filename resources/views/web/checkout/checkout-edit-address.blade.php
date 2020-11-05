@@ -92,7 +92,7 @@
                                 </li>
                                 <!--/ .row -->
                                 <li>
-                                  <a href="{{route('web.address.address')}}" class="button button1" style="padding: 4px 12px;border-width: 1px;">Back</a>
+                                  <a href="{{route('web.checkout.checkout')}}" class="button button1" style="padding: 4px 12px;border-width: 1px;">Back</a>
                                   <button type="submit" class="button button-clear" id="address_btn">Save</button>
                                 </li>
                               </ul>

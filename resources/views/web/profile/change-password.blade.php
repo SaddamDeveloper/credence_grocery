@@ -18,7 +18,7 @@
                       <div class="new-users"><strong>Change Password</strong>
                           <div class="content">
                               <p>If you have an account with us, please log in.</p>
-                              <form action="http://assamproducts.webinfotechghy.xyz/login" autocomplete="off" method="POST">
+                              <form action="" autocomplete="off" method="POST">
                                   <input type="hidden" name="_token" value="SbcrwxGNI8nsUjuCOLRqrFVYCwSHDcTxbYEnbBCi">
                                   <ul class="form-list">
                                       <li>

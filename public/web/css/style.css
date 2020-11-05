@@ -818,7 +818,7 @@ ul.currencies_list li a:hover {
 }
 .mini-cart .basket a span.cart_count, .mini-cart .basket1 a span.cart_count {
 	display: inline-block;
-	color: #fff;
+	color: #327519;
 	width: 30px;
 	font-size: 14px;
 	height: 20px;
@@ -827,11 +827,11 @@ ul.currencies_list li a:hover {
 	margin-right: 0px;
 	padding-left: 0px;
 	position: absolute;
-    background: #327519;
-    width: 20px;
- 	border-radius: 30px 30px 30px 0px;
-    top: -15px;
-    right: -13px;
+	background: #f3d60a;
+	width: 20px;
+	border-radius: 30px 30px 30px 0px;
+	top: -15px;
+	right: -13px;
 }
 .mini-cart .basket a div.price {
 	display: inline-block;
@@ -7140,13 +7140,14 @@ button.button.btn-proceed-checkout span {
     color: #555;
     background-color: #fff;
     background-image: none;
-    border: 1px solid #eaeaea;
+    border: 1px solid #32751961;
     border-radius: 0px;
     -webkit-box-shadow: none;
     box-shadow:none;
     -webkit-transition: none;
     -o-transition: none;
-    transition: none; margin:auto auto 8px;
+    transition: none;
+    margin:auto auto 8px;
 }
 h3.checkout-sep{ font-size:16px; margin-bottom:0px; text-transform:capitalize;}
 .checkout-page .box-border input[type="radio"]{
@@ -7695,7 +7696,7 @@ a.button.wishlist {
 }
 /* 32. Account Login  */
 .account-login {
-	background: none repeat scroll 0 0 #32751999;
+	background: none repeat scroll 0 0 #e4e2e2;
 	border: 1px solid #e5e5e5;
 	margin: 15px 0px 20px;
 	overflow: hidden;
@@ -8002,9 +8003,9 @@ footer .footer-top a {
 footer {
 	padding: 0px 0 0;
 	overflow: hidden;
-	color: #fff;
+	color: #111;
 	padding-top: 0px;
-	background-color: #111;
+	background-color: #32751921;
 }
 footer ul {
 	margin: 0px;
@@ -8026,7 +8027,7 @@ footer a {
 footer .footer-inner {
 	margin: auto;
 	overflow: hidden;
-	margin: 30px 0;
+	margin: 0 0 20px;
 }
 footer .footer-inner h3 {
 	color: #3D4C4F;
@@ -8053,7 +8054,8 @@ footer p {
 }
 footer .footer-links a {
 	display: inline-block;
-	color: ##717171
+	color: #3c3c3c;
+	padding: 2px;
 }
 footer a {
 	line-height: normal;
@@ -8065,15 +8067,17 @@ footer p {
 	line-height: 20px;
 }
 footer a {
-	color: #aaa
+	color: #2b2b2b;
 }
 footer h4 {
 	padding: 0 0 10px;
 	font-size: 14px;
 	margin: 0;
-	color: #fff;
+	font-weight: 900;
+	color: #327519;
 	text-transform: uppercase;
-	letter-spacing: 1px
+	letter-spacing: 1px;
+	text-decoration: underline;
 }
 footer .input-text:focus {
 	background: #fff;
@@ -8083,7 +8087,7 @@ footer a:hover {
 	text-decoration: none;
 }
 footer .coppyright {
-	color: #666;
+	color: #fff;
 	float: left;
 	margin-top: 4px;
 }
@@ -8093,10 +8097,15 @@ footer .coppyright {
 	width: 100%;
 	margin: auto;
 	padding: 15px 0 12px;
-	background-color: #060606;
+	background-color: #327519;
 }
 .footer-bottom a {
-	color: #999;
+	color: #f3d60a;
+	text-transform: uppercase;
+}
+.footer-bottom a:hover {
+    color: #f3d60a;
+    text-decoration: underline;
 }
 .footer-bottom .company-links ul {
 	padding: 0px;
@@ -8395,7 +8404,7 @@ button.subscribe:before {
 	overflow: hidden
 }
 .social h4 {
-	margin: 28px 0 0px 0px;
+	margin: 0;
 }
 .social ul.inline-mode li a:before {
 	content: "";
@@ -8414,6 +8423,7 @@ button.subscribe:before {
 	display: inline-block;
 	text-align: center;
 	border-radius: 3px;
+	line-height: 36px;
 }
 .social .fb a:hover, .social .tw a:hover, .social .googleplus a:hover, .social .rss a:hover, .social .instagram a:hover, .social .linkedin a:hover {
 	background: #00b9f5

@@ -32,7 +32,7 @@
                                     <p>Guwahati, ASSAM</p>
                                     <p>Pincode: 784125</p>
                                     <p>Phone: 4565456233 | Email: im@vsishal.com</p>
-                                    <a href="edit-address.php" title="">EDIT THIS ADDRESS</a>
+                                    <a href="{{route('web.address.edit-address')}}" title="">EDIT THIS ADDRESS</a>
                                   </div>
                                 </div>
                               </div>
@@ -44,7 +44,7 @@
                                     <p>Kolkata, WEST BENGAL</p>
                                     <p>Pincode: 784125</p>
                                     <p>Phone: 4565456233 | Email: im@vsishal.com</p>
-                                    <a href="edit-address.php" title="">EDIT THIS ADDRESS</a>
+                                    <a href="{{route('web.address.edit-address')}}" title="">EDIT THIS ADDRESS</a>
                                   </div>
                                 </div>
                               </div>
@@ -56,7 +56,7 @@
                                     <p>Mumbai, MAHARASTRA</p>
                                     <p>Pincode: 784125</p>
                                     <p>Phone: 4565456233 | Email: im@vsishal.com</p>
-                                    <a href="edit-address.php" title="">EDIT THIS ADDRESS</a>
+                                    <a href="{{route('web.address.edit-address')}}" title="">EDIT THIS ADDRESS</a>
                                   </div>
                                 </div>
                               </div>
@@ -127,7 +127,7 @@
                                   <!--/ .row -->
                                   <li>
                                     <button onclick="myFunction()" class="button button1" type="button">Cancel</button>
-                                    <button type="submit" class="button" id="address_btn">Continue</button>
+                                    <button type="submit" class="button button-clear" id="address_btn">Continue</button>
                                   </li>
                                 </ul>
                                 </form>
