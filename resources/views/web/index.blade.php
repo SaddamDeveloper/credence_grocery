@@ -102,7 +102,10 @@
                             <div class="item-title"> <a title="Product Title Here" href="{{route('web.product.single-product')}}"> Product Title Here </a> </div>
                             <div class="item-content">
                               <div class="item-price">
-                                <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
+                                <div class="price-box">
+                                    <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> $156.00 </span> </p>
+                                    <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> $167.00 </span> </p>
+                                  </div>
                               </div>
                               <div class="action">
                                 <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
@@ -126,7 +129,10 @@
                             <div class="item-title"> <a title="Product Title Here" href="{{route('web.product.single-product')}}"> Product Title Here </a> </div>
                             <div class="item-content">
                               <div class="item-price">
-                                <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
+                                <div class="price-box">
+                                    <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> $156.00 </span> </p>
+                                    <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> $167.00 </span> </p>
+                                  </div>
                               </div>
                               <div class="action">
                                 <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
@@ -150,7 +156,10 @@
                             <div class="item-title"> <a title="Product Title Here" href="{{route('web.product.single-product')}}"> Product Title Here </a> </div>
                             <div class="item-content">
                               <div class="item-price">
-                                <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
+                                <div class="price-box">
+                                    <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> $156.00 </span> </p>
+                                    <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> $167.00 </span> </p>
+                                  </div>
                               </div>
                               <div class="action">
                                 <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
@@ -174,7 +183,10 @@
                             <div class="item-title"> <a title="Product Title Here" href="{{route('web.product.single-product')}}"> Product Title Here </a> </div>
                             <div class="item-content">
                               <div class="item-price">
-                                <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
+                                <div class="price-box">
+                                    <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> $156.00 </span> </p>
+                                    <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> $167.00 </span> </p>
+                                  </div>
                               </div>
                               <div class="action">
                                 <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
@@ -198,7 +210,10 @@
                             <div class="item-title"> <a title="Product Title Here" href="{{route('web.product.single-product')}}"> Product Title Here </a> </div>
                             <div class="item-content">
                               <div class="item-price">
-                                <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
+                                <div class="price-box">
+                                    <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> $156.00 </span> </p>
+                                    <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> $167.00 </span> </p>
+                                  </div>
                               </div>
                               <div class="action">
                                 <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
@@ -222,7 +237,10 @@
                             <div class="item-title"> <a title="Product Title Here" href="{{route('web.product.single-product')}}"> Product Title Here </a> </div>
                             <div class="item-content">
                               <div class="item-price">
-                                <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
+                                <div class="price-box">
+                                    <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> $156.00 </span> </p>
+                                    <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> $167.00 </span> </p>
+                                  </div>
                               </div>
                               <div class="action">
                                 <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
@@ -246,7 +264,10 @@
                             <div class="item-title"> <a title="Product Title Here" href="{{route('web.product.single-product')}}"> Product Title Here </a> </div>
                             <div class="item-content">
                               <div class="item-price">
-                                <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
+                                <div class="price-box">
+                                    <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> $156.00 </span> </p>
+                                    <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> $167.00 </span> </p>
+                                  </div>
                               </div>
                               <div class="action">
                                 <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
@@ -295,7 +316,10 @@
                               <div class="item-title"> <a title="Product Title Here" href="{{route('web.product.single-product')}}"> Product Title Here </a> </div>
                               <div class="item-content">
                                 <div class="item-price">
-                                  <div class="price-box"> <span class="regular-price"> <span class="price">$225.00</span> </span> </div>
+                                  <div class="price-box">
+                                    <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> $156.00 </span> </p>
+                                    <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> $167.00 </span> </p>
+                                  </div>
                                 </div>
                                 <div class="action">
                                   <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
@@ -317,7 +341,10 @@
                               <div class="item-title"> <a title="Product Title Here" href="{{route('web.product.single-product')}}"> Product Title Here </a> </div>
                               <div class="item-content">
                                 <div class="item-price">
-                                  <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
+                                  <div class="price-box">
+                                    <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> $156.00 </span> </p>
+                                    <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> $167.00 </span> </p>
+                                  </div>
                                 </div>
                                 <div class="action">
                                   <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
@@ -364,7 +391,10 @@
                               <div class="item-title"> <a title="Product Title Here" href="{{route('web.product.single-product')}}"> Product Title Here </a> </div>
                               <div class="item-content">
                                 <div class="item-price">
-                                  <div class="price-box"> <span class="regular-price"> <span class="price">$225.00</span> </span> </div>
+                                  <div class="price-box">
+                                    <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> $156.00 </span> </p>
+                                    <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> $167.00 </span> </p>
+                                  </div>
                                 </div>
                                 <div class="action">
                                   <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
@@ -411,7 +441,10 @@
                               <div class="item-title"> <a title="Product Title Here" href="{{route('web.product.single-product')}}"> Product Title Here </a> </div>
                               <div class="item-content">
                                 <div class="item-price">
-                                  <div class="price-box"> <span class="regular-price"> <span class="price">$225.00</span> </span> </div>
+                                  <div class="price-box">
+                                    <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> $156.00 </span> </p>
+                                    <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> $167.00 </span> </p>
+                                  </div>
                                 </div>
                                 <div class="action">
                                   <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
@@ -482,7 +515,10 @@
                           <div class="item-title"> <a title="Product Title Here" href="{{route('web.product.single-product')}}"> Product Title Here </a> </div>
                           <div class="item-content">
                             <div class="item-price">
-                              <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
+                              <div class="price-box">
+                                    <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> $156.00 </span> </p>
+                                    <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> $167.00 </span> </p>
+                                  </div>
                             </div>
                             <div class="action">
                               <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
@@ -529,7 +565,10 @@
                           <div class="item-title"> <a title="Product Title Here" href="{{route('web.product.single-product')}}"> Product Title Here </a> </div>
                           <div class="item-content">
                             <div class="item-price">
-                              <div class="price-box"> <span class="regular-price"> <span class="price">$225.00</span> </span> </div>
+                              <div class="price-box">
+                                    <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> $156.00 </span> </p>
+                                    <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> $167.00 </span> </p>
+                                  </div>
                             </div>
                             <div class="action">
                               <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
@@ -551,7 +590,10 @@
                           <div class="item-title"> <a title="Product Title Here" href="{{route('web.product.single-product')}}"> Product Title Here </a> </div>
                           <div class="item-content">
                             <div class="item-price">
-                              <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
+                              <div class="price-box">
+                                    <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> $156.00 </span> </p>
+                                    <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> $167.00 </span> </p>
+                                  </div>
                             </div>
                             <div class="action">
                               <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
