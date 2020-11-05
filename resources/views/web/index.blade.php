@@ -62,11 +62,111 @@
               </div>
               <div class="category-products">
                 <ul class="products-grid row">
+                    @if (isset($products) && !empty($products))
+                        @foreach ($products as $product)
+                            <li class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <div class="item">
+                                    <div class="item-inner">
+                                    <div class="item-img">
+                                        <div class="item-img-info"> <a class="product-image" title="{{ $product->name }}" href="{{ route('web.product.single-product', ['slug' => $product->slug, 'id' => $product->id]) }}"> <img alt="{{ $product->name }}" src="{{ asset('images/products/thumb/'.$product->main_image) }}" height="263" width="263"> </a>
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <div class="info-inner">
+                                        <div class="item-title"> <a title="{{ $product->name }}" href="{{ route('web.product.single-product', ['slug' => $product->slug, 'id' => $product->id]) }}"> {{ $product->name }} </a> </div>
+                                        <div class="item-content">
+                                            <div class="item-price">
+                                            <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
+                                            </div>
+                                            <div class="action">
+                                            <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
+                                            <button class="button btn-cart" type="button" title="" data-original-title="Add to Cart"><span>Add to Cart</span> </button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </li>
+                        @endforeach
+                    @endif
+                {{-- <li class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                    <div class="item">
+                      <div class="item-inner">
+                        <div class="item-img">
+                          <div class="item-img-info"> <a class="product-image" title="Product Title Here" href="{{route('web.product.single-product')}}"> <img alt="Product Title Here" src="web/images/products/img02.jpg"> </a>
+                          </div>
+                        </div>
+                        <div class="item-info">
+                          <div class="info-inner">
+                            <div class="item-title"> <a title="Product Title Here" href="{{route('web.product.single-product')}}"> Product Title Here </a> </div>
+                            <div class="item-content">
+                              <div class="item-price">
+                                <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
+                              </div>
+                              <div class="action">
+                                <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
+                                <button class="button btn-cart" type="button" title="" data-original-title="Add to Cart"><span>Add to Cart</span> </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
                   <li class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
                     <div class="item">
                       <div class="item-inner">
                         <div class="item-img">
-                          <div class="item-img-info"> <a class="product-image" title="Product Title Here" href="{{route('web.product.single-product')}}"> <img alt="Product Title Here" src="web/images/products/img06.jpg"> </a>
+                          <div class="item-img-info"> <a class="product-image" title="Product Title Here" href="{{route('web.product.single-product')}}"> <img alt="Product Title Here" src="web/images/products/img03.jpg"> </a>
+                          </div>
+                        </div>
+                        <div class="item-info">
+                          <div class="info-inner">
+                            <div class="item-title"> <a title="Product Title Here" href="{{route('web.product.single-product')}}"> Product Title Here </a> </div>
+                            <div class="item-content">
+                              <div class="item-price">
+                                <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
+                              </div>
+                              <div class="action">
+                                <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
+                                <button class="button btn-cart" type="button" title="" data-original-title="Add to Cart"><span>Add to Cart</span> </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                    <div class="item">
+                      <div class="item-inner">
+                        <div class="item-img">
+                          <div class="item-img-info"> <a class="product-image" title="Product Title Here" href="{{route('web.product.single-product')}}"> <img alt="Product Title Here" src="web/images/products/img01.jpg"> </a>
+                          </div>
+                        </div>
+                        <div class="item-info">
+                          <div class="info-inner">
+                            <div class="item-title"> <a title="Product Title Here" href="{{route('web.product.single-product')}}"> Product Title Here </a> </div>
+                            <div class="item-content">
+                              <div class="item-price">
+                                <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
+                              </div>
+                              <div class="action">
+                                <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
+                                <button class="button btn-cart" type="button" title="" data-original-title="Add to Cart"><span>Add to Cart</span> </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                    <div class="item">
+                      <div class="item-inner">
+                        <div class="item-img">
+                          <div class="item-img-info"> <a class="product-image" title="Product Title Here" href="{{route('web.product.single-product')}}"> <img alt="Product Title Here" src="{{ asset('images/products/thumb/'.$product->main_image) }}"> </a>
                           </div>
                         </div>
                         <div class="item-info">
@@ -157,103 +257,7 @@
                         </div>
                       </div>
                     </div>
-                  </li>
-                  <li class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                    <div class="item">
-                      <div class="item-inner">
-                        <div class="item-img">
-                          <div class="item-img-info"> <a class="product-image" title="Product Title Here" href="{{route('web.product.single-product')}}"> <img alt="Product Title Here" src="web/images/products/img06.jpg"> </a>
-                          </div>
-                        </div>
-                        <div class="item-info">
-                          <div class="info-inner">
-                            <div class="item-title"> <a title="Product Title Here" href="{{route('web.product.single-product')}}"> Product Title Here </a> </div>
-                            <div class="item-content">
-                              <div class="item-price">
-                                <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
-                              </div>
-                              <div class="action">
-                                <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
-                                <button class="button btn-cart" type="button" title="" data-original-title="Add to Cart"><span>Add to Cart</span> </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                    <div class="item">
-                      <div class="item-inner">
-                        <div class="item-img">
-                          <div class="item-img-info"> <a class="product-image" title="Product Title Here" href="{{route('web.product.single-product')}}"> <img alt="Product Title Here" src="web/images/products/img02.jpg"> </a>
-                          </div>
-                        </div>
-                        <div class="item-info">
-                          <div class="info-inner">
-                            <div class="item-title"> <a title="Product Title Here" href="{{route('web.product.single-product')}}"> Product Title Here </a> </div>
-                            <div class="item-content">
-                              <div class="item-price">
-                                <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
-                              </div>
-                              <div class="action">
-                                <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
-                                <button class="button btn-cart" type="button" title="" data-original-title="Add to Cart"><span>Add to Cart</span> </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                    <div class="item">
-                      <div class="item-inner">
-                        <div class="item-img">
-                          <div class="item-img-info"> <a class="product-image" title="Product Title Here" href="{{route('web.product.single-product')}}"> <img alt="Product Title Here" src="web/images/products/img03.jpg"> </a>
-                          </div>
-                        </div>
-                        <div class="item-info">
-                          <div class="info-inner">
-                            <div class="item-title"> <a title="Product Title Here" href="{{route('web.product.single-product')}}"> Product Title Here </a> </div>
-                            <div class="item-content">
-                              <div class="item-price">
-                                <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
-                              </div>
-                              <div class="action">
-                                <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
-                                <button class="button btn-cart" type="button" title="" data-original-title="Add to Cart"><span>Add to Cart</span> </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                    <div class="item">
-                      <div class="item-inner">
-                        <div class="item-img">
-                          <div class="item-img-info"> <a class="product-image" title="Product Title Here" href="{{route('web.product.single-product')}}"> <img alt="Product Title Here" src="web/images/products/img01.jpg"> </a>
-                          </div>
-                        </div>
-                        <div class="item-info">
-                          <div class="info-inner">
-                            <div class="item-title"> <a title="Product Title Here" href="{{route('web.product.single-product')}}"> Product Title Here </a> </div>
-                            <div class="item-content">
-                              <div class="item-price">
-                                <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
-                              </div>
-                              <div class="action">
-                                <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
-                                <button class="button btn-cart" type="button" title="" data-original-title="Add to Cart"><span>Add to Cart</span> </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
+                  </li> --}}
                   <li class="item col-12">
                     <button type="submit" title="Submit" class="button button-clear"><span>View all</span></button>
                   </li>
@@ -276,7 +280,7 @@
                   <h2>Popular Product</h2>
                 </div>
               </div>
-              <div class="row">
+              {{-- <div class="row">
                 <div class="col-sm-12">
                   <div class="upsell-products-slider1 product-flexslider hidden-buttons">
                     <div class="slider-items slider-width-col4 products-grid block-content">
@@ -421,7 +425,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> --}}
             </div>
           </div>
         </div>
@@ -441,29 +445,33 @@
               </div>
               <div id="" class="upsell-products-slider product-flexslider hidden-buttons">
                 <div class="slider-items slider-width-col4 products-grid block-content">
-                  <div class="item" onclick="window.location='single_product.html';">
-                    <div class="item-inner">
-                      <div class="item-img">
-                        <div class="item-img-info"> <a href="{{route('web.product.single-product')}}" class="product-image" title="Product Title Here" href="{{route('web.product.single-product')}}"> <img alt="Product Title Here" src="web/images/products/img05.jpg"> </a>
-                        </div>
-                      </div>
-                      <div class="item-info">
-                        <div class="info-inner">
-                          <div class="item-title"> <a title="Product Title Here" href="{{route('web.product.single-product')}}"> Product Title Here </a> </div>
-                          <div class="item-content">
-                            <div class="item-price">
-                              <div class="price-box"> <span class="regular-price"> <span class="price">$225.00</span> </span> </div>
+                    @if (isset($latest_product) && !empty($latest_product))
+                        @foreach ($latest_product as $latest)
+                            <div class="item" onclick="window.location='single_product.html';">
+                                <div class="item-inner">
+                                    <div class="item-img">
+                                    <div class="item-img-info"> <a href="{{ route('web.product.single-product', ['slug' => $latest->slug, 'id' => $latest->id]) }}" class="product-image" title="{{ $latest->name }}" href="{{ route('web.product.single-product', ['slug' => $latest->slug, 'id' => $latest->id]) }}"> <img alt="{{ $latest->name }}" src="{{ asset('images/products/thumb/'.$latest->main_image) }}" height="265" width="265"> </a>
+                                    </div>
+                                    </div>
+                                    <div class="item-info">
+                                    <div class="info-inner">
+                                        <div class="item-title"> <a title="{{ $latest->name }}" href="{{ route('web.product.single-product', ['slug' => $latest->slug, 'id' => $latest->id]) }}"> {{ $latest->name }} </a> </div>
+                                        <div class="item-content">
+                                        <div class="item-price">
+                                            <div class="price-box"> <span class="regular-price"> <span class="price">{{ number_format($latest->mrp, 2) }}</span> </span> </div>
+                                        </div>
+                                        <div class="action">
+                                            <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
+                                            <button class="button btn-cart" type="button" title="" data-original-title="Add to Cart"><span>Add to Cart</span> </button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="action">
-                              <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
-                              <button class="button btn-cart" type="button" title="" data-original-title="Add to Cart"><span>Add to Cart</span> </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item">
+                        @endforeach
+                    @endif
+                  {{-- <div class="item">
                     <div class="item-inner">
                       <div class="item-img">
                         <div class="item-img-info"> <a class="product-image" title="Product Title Here" href="{{route('web.product.single-product')}}"> <img alt="Product Title Here" src="web/images/products/img03.jpg"> </a>
@@ -557,7 +565,7 @@
                   <div class="item">
                     <div class="item-inner">
                       <div class="item-img">
-                        <div class="item-img-info"> <a class="product-image" title="Product Title Here" href="{{route('web.product.single-product')}}"> <img alt="Product Title Here" src="web/images/products/img06.jpg"> </a>
+                        <div class="item-img-info"> <a class="product-image" title="Product Title Here" href="{{route('web.product.single-product')}}"> <img alt="Product Title Here" src="{{ asset('images/products/thumb/'.$product->main_image) }}"> </a>
                         </div>
                       </div>
                       <div class="item-info">
@@ -678,7 +686,7 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> --}}
                 </div>
               </div>
             </div>

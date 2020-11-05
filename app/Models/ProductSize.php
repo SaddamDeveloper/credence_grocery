@@ -16,4 +16,9 @@ class ProductSize extends Model
     {
         return $this->belongsTo('App\Models\SizeType','size_type_id',$this->primaryKey);
     }
+
+    public function product()
+    {
+        return $this->belongsTo('App\Models\Product');
+    }
 }

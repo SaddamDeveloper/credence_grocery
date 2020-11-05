@@ -7,12 +7,11 @@
 
   <!-- Mobile specific metas  -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <!-- Favicon  -->
   <link rel="shortcut icon" type="image/x-icon" href="web/images/fab.png">
 
   <!-- CSS Style -->
-  <link rel="stylesheet" href="web/css/link-style.css">
+  <link rel="stylesheet" href="{{ asset('web/css/link-style.css') }}">
   <link rel="stylesheet" href="">
   @stack('css')
   @stack('seo')
@@ -34,7 +33,7 @@
           </form>
         </div>
       </li>
-      <li><a href="index.html">Home</a></li>
+      <li><a href="{{ route('web.index') }}">Home</a></li>
       <li><a href="#">Pages</a>
         <ul>
           <li><a href="shop_grid.html"><span>Shop Grid</span></a>
@@ -195,7 +194,7 @@
             </div>
             <div class="col-lg-6 col-md-4 col-sm-4 col-xs-11 jtv-logo-box"> 
               <!-- Header Logo -->
-              <div class="logo"> <a title="eCommerce" href="index.php"><h1>credence ever llpp</h1> </a> </div>
+              <div class="logo"> <a title="eCommerce" href="{{ route('web.index') }}"><h1>credence ever llpp</h1> </a> </div>
               <!-- End Header Logo --> 
             </div>
             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-1">
@@ -266,117 +265,119 @@
             <!-- BEGIN NAV -->          
             <ul class="menu">
               <li>Shop by Category</li>
-              <li>
-                <h3>Books</h3>
-                <div>
-                  <h4>Books</h4>
-                  <span class="sub-menu">                    
-                    <ul>
-                      <li><a href="#">English</a></li>
-                      <li><a href="#">Dutch</a></li>
-                      <li><a href="#">German</a></li>
-                      <li><a href="#">French</a></li>
-                      <li><a href="#">Spanish</a></li>
-                      <li><a href="#">Turkish</a></li>
-                      <li><a href="#">Arabic</a></li>
-                    </ul>
-                  </span>
-                  <span class="sub-menu">     
-                    <img src="web/images/menu-img4.jpg" alt="">
-                  </span>
-                </div>
-              </li>
-              <li>
-                <h3>Computer & Electronics</h3>
-                <div>
-                  <h4>Books</h4>
-                  <span class="sub-menu">                    
-                    <ul>
-                      <li><a href="#">English</a></li>
-                      <li><a href="#">Dutch</a></li>
-                      <li><a href="#">German</a></li>
-                      <li><a href="#">French</a></li>
-                      <li><a href="#">Spanish</a></li>
-                      <li><a href="#">Turkish</a></li>
-                      <li><a href="#">Arabic</a></li>
-                      <li><a href="#">German</a></li>
-                      <li><a href="#">French</a></li>
-                      <li><a href="#">Spanish</a></li>
-                      <li><a href="#">Turkish</a></li>
-                      <li><a href="#">Arabic</a></li>
-                    </ul>
-                  </span>
-                  <span class="sub-menu">     
-                    <img src="web/images/menu-img3.jpg" alt="">
-                  </span>
-                </div>
-              </li>
-              <li>
-                <h3>Toys</h3>
-                <div>
-                  <h4>Brands</h4>
-                </div>
-              </li>	
-              <li>
-                <h3>Sport & Leisure</h3>
-                <div>
-                  <h4>Sport</h4>
-                </div>
-              </li>
-              <li>
-                <h3>Home & Cooking</h3>
-                <div>
-                  <h4>Cooking</h4>
-                </div>
-              </li>	
-              <li>
-                <h3>Garden & DIY</h3>
-                <div>
-                  <h4>Garden</h4>
-                </div>
-              </li>
-              
-              <li>
-                <h3>Computer & Electronics</h3>
-                <div>
-                  <h4>Smartphones</h4>
-                </div>
-              </li>
-              <li>
-                <h3>Toys</h3>
-                <div>
-                  <h4>Brands</h4>
-                </div>
-              </li>	
-              <li>
-                <h3>Sport & Leisure</h3>
-                <div>
-                  <h4>Sport</h4>
-                </div>
-              </li>
-              <li>
-                <h3>Home & Cooking</h3>
-                <div>
-                  <h4>Cooking</h4>
-                </div>
-              </li>	
-              <li>
-                <h3>Garden & DIY</h3>
-                <div>
-                  <h4>Garden</h4>
-                </div>
-              </li>
-              
+              @forelse ($categories ?:[] as $category)
+                <li>
+                    <h3>{{ $category->name }}</h3>
+                    @if(isset($category->subCategory))
+                    <div>
+                        <h4>{{ $category->name}}</h4>
+                        <span class="sub-menu">                    
+                            <ul>
+                                @foreach ($category->subCategory as $subCategory)
+                                    <li><a href="{{ route('web.product.product-list', ['slug' => $subCategory->slug, 'id' => $subCategory->id]) }}">{{ $subCategory->name }}</a></li>
+                                @endforeach
+                            </ul>
+                        </span>
+                        <span class="sub-menu">     
+                            <img src="{{ asset('images/category/category/'.$category->image) }}" alt="" height="200">
+                        </span>
+                      </div>
+                    @endif
+                </li>
+                {{--<li>
+                    <h3>Computer & Electronics</h3>
+                    <div>
+                    <h4>Books</h4>
+                    <span class="sub-menu">                    
+                        <ul>
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">Dutch</a></li>
+                        <li><a href="#">German</a></li>
+                        <li><a href="#">French</a></li>
+                        <li><a href="#">Spanish</a></li>
+                        <li><a href="#">Turkish</a></li>
+                        <li><a href="#">Arabic</a></li>
+                        <li><a href="#">German</a></li>
+                        <li><a href="#">French</a></li>
+                        <li><a href="#">Spanish</a></li>
+                        <li><a href="#">Turkish</a></li>
+                        <li><a href="#">Arabic</a></li>
+                        </ul>
+                    </span>
+                    <span class="sub-menu">     
+                        <img src="web/images/menu-img3.jpg" alt="">
+                    </span>
+                    </div>
+                    </li>
+                    <li>
+                        <h3>Toys</h3>
+                        <div>
+                        <h4>Brands</h4>
+                        </div>
+                    </li>	
+                    <li>
+                        <h3>Sport & Leisure</h3>
+                        <div>
+                        <h4>Sport</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Home & Cooking</h3>
+                        <div>
+                        <h4>Cooking</h4>
+                        </div>
+                    </li>	
+                    <li>
+                        <h3>Garden & DIY</h3>
+                        <div>
+                        <h4>Garden</h4>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <h3>Computer & Electronics</h3>
+                        <div>
+                        <h4>Smartphones</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Toys</h3>
+                        <div>
+                        <h4>Brands</h4>
+                        </div>
+                    </li>	
+                    <li>
+                        <h3>Sport & Leisure</h3>
+                        <div>
+                        <h4>Sport</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Home & Cooking</h3>
+                        <div>
+                        <h4>Cooking</h4>
+                        </div>
+                    </li>	
+                    <li>
+                        <h3>Garden & DIY</h3>
+                        <div>
+                        <h4>Garden</h4>
+                        </div>
+                </li> --}}
+              @empty
+                  <li>No Category Found!</li>
+              @endforelse
             </ul>
-            
             <ul class="temp">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Fashion Store</a></li>
-              <li><a href="#">Login</a></li>
-              <li><a href="#">Register</a></li>
-              <li><a href="#"><i class="icon-user icons"></i>  Hello, Vishal</a></li>
+            <li><a href="{{ route('web.index') }}">Home</a></li>
+            <li><a href="#">Fashion Store</a></li>
+            @if(Auth::guard('web')->check())
+                <li><a href="#"><i class="icon-user icons"></i>  Hello, {{ Auth::guard('web')->user()->name }}</a></li>
+            @else
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Register</a></li>
+            @endif
             </ul>
-
           </div>
         </div>
       </nav>
