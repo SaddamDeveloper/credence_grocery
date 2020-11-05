@@ -20,13 +20,50 @@ Route::get('/Confirm', function () {
     return view('web.checkout.confirm');
 })->name('web.checkout.confirm');
 
-// Route::get('Product-detail', function () {
-//     return view('web.product.single-product');
-// })->name('web.product.single-product');
+Route::get('/Address', function () {
+    return view('web.address.address');
+})->name('web.address.address');
 
-Route::get('login', function () {
-    return view('web.login');
-});
-Route::get('login', function () {
-    return view('web.register');
-});
+Route::get('/edit-Address', function () {
+    return view('web.address.edit-address');
+})->name('web.address.edit-address');
+
+Route::get('/checkout-edit-Address', function () {
+    return view('web.checkout.checkout-edit-address');
+})->name('web.checkout.checkout-edit-address');
+
+Route::get('/Order', function () {
+    return view('web.order.order');
+})->name('web.order.order');
+
+Route::get('/Wishlist', function () {
+    return view('web.wishlist.wishlist');
+})->name('web.wishlist.wishlist');
+
+Route::get('/Profile', function () {
+    return view('web.profile.profile');
+})->name('web.profile.profile');
+
+Route::get('/edit-Profile', function () {
+    return view('web.profile.edit-profile');
+})->name('web.profile.edit-profile');
+
+Route::get('/change-password', function () {
+    return view('web.profile.change-password');
+})->name('web.profile.change-password');
+
+Route::get('/login', function () {
+    return view('web.user.login');
+})->name('web.user.login');
+
+Route::get('/register', function () {
+    return view('web.user.register');
+})->name('web.user.register');
+
+Route::get('/forgot-password', function () {
+    return view('web.user.forgot-password');
+})->name('web.user.forgot-password');
+
+Route::get('/New-password', function () {
+    return view('web.user.forgot-change-password');
+})->name('web.user.forgot-change-password');

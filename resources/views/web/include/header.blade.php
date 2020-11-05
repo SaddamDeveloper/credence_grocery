@@ -191,6 +191,16 @@
                   <button type="button" class="search-btn-bg"><span class="glyphicon glyphicon-search"></span>&nbsp;</button>
                 </form>
               </div>
+                <div class="col-md-12" id="livesearch" style="display: none;">
+                  <div class="row"><span class="triup glyphicon glyphicon-triangle-top"></span></div> 
+                  <div class="row livesrc"><div class="col-md-3"><a href="{{route('web.product.single-product')}}"><img src="{{asset('web/images/products/img03.jpg')}}" width="100"></a></div><div class="col-md-9"><p style="font-weight: bold;"><a href="{{route('web.product.single-product')}}">Home Decor</a></p><p>₹-1592.01</p></div></div>
+                  <div class="row livesrc"><div class="col-md-3"><a href="{{route('web.product.single-product')}}"><img src="{{asset('web/images/products/img04.jpg')}}" width="100"></a></div><div class="col-md-9"><p style="font-weight: bold;"><a href="{{route('web.product.single-product')}}">Home Decor</a></p><p>₹-1592.01</p></div></div>
+                  <div class="row livesrc"><div class="col-md-3"><a href="{{route('web.product.single-product')}}"><img src="{{asset('web/images/products/img05.jpg')}}" width="100"></a></div><div class="col-md-9"><p style="font-weight: bold;"><a href="{{route('web.product.single-product')}}">Home Decor</a></p><p>₹-1592.01</p></div></div>
+                  <div class="row livesrc"><div class="col-md-3"><a href="{{route('web.product.single-product')}}"><img src="{{asset('web/images/products/img13.jpg')}}" width="100"></a></div><div class="col-md-9"><p style="font-weight: bold;"><a href="{{route('web.product.single-product')}}">Home Decor</a></p><p>₹-1592.01</p></div></div>
+                  <div class="row livesrc"><div class="col-md-3"><a href="{{route('web.product.single-product')}}"><img src="{{asset('web/images/products/img10.jpg')}}" width="100"></a></div><div class="col-md-9"><p style="font-weight: bold;"><a href="{{route('web.product.single-product')}}">Home Decor</a></p><p>₹-1592.01</p></div></div>
+                  {{-- No product --}}
+                  <div class="row livesrc"><div class="col-md-12"><p style="font-weight: bold;text-align:center;margin: 9px 0;color: #327519;">No Product</p></div></div>
+              </div>
             </div>
             <div class="col-lg-6 col-md-4 col-sm-4 col-xs-11 jtv-logo-box"> 
               <!-- Header Logo -->
