@@ -7,6 +7,11 @@
   @endsection
 
   @section('content')
+
+  @php
+      $min_size = $product->minSize;
+      $min_size = $min_size[0];
+  @endphp
     <!-- Main Container -->
     <section class="main-container col1-layout">
       <div class="main">
@@ -51,11 +56,11 @@
                       <div class="info-orther">
                         <p>Availability: 
                             {{-- {{ dd($product->size) }} --}}
-                            {{-- @if ($product->size->stock > 0)
+                            @if ($min_size->stock > 0)
                                 <span class="in-stock">In stock</span>
                             @else
                                 <span>Out of Stock</span>
-                            @endif --}}
+                            @endif
                         </p>
                       </div>
                       <div class="short-description">
@@ -70,10 +75,18 @@
                             <ul class="list-size" id="list-size">
                                 @if (isset($product->sizes))
                                     @foreach ($product->sizes as $sizes)
-                                        <li class="col-sel size-sel">
-                                            <span>{{ $sizes->size }} KG</span>
-                                            <input type="radio" name="product_size_id" value="{{ $sizes->id }}" checked="" hidden="">
+                                      @if ($min_size->id == $sizes->id)
+                                        <li class="col-sel size-sel selected">
+                                          <span>{{ $sizes->size }} KG</span>
+                                          <input type="radio" name="product_size_id" value="{{ $sizes->id }}" hidden="" checked>
                                         </li>
+                                      @else
+                                        <li class="col-sel size-sel">
+                                          <span>{{ $sizes->size }} KG</span>
+                                          <input type="radio" name="product_size_id" value="{{ $sizes->id }}" hidden="">
+                                        </li>
+                                      @endif
+                                       
                                     @endforeach
                                 @endif
                               {{-- <li class="col-sel size-sel">
