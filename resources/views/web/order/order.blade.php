@@ -20,35 +20,39 @@
                     <div class="col-md-9">
                         <div class="block-title" style="border-bottom: 0;text-decoration: underline;">MY ORDERS</div>
                         <div class="row singleorder">
-                            <div class="row">
-                                <div class="col-md-2 singleorderimg">
-                                    <a href="#"><img src="{{ asset('web/images/products/img02.jpg') }}" alt=""></a>
-                                </div>
-                                <div class="col-md-10 singleordercontent"><a href="#">Royal velvet</a>
-                                    <div class="cart-price" style="text-align: left;">
-                                        <div class="quantity">1499</small> ₹1299</p> &nbsp; <b>|</b>
-                                          <label style="margin-bottom: 0;">Quantity:</label>&nbsp;&nbsp;1  &nbsp; &nbsp;<b>|</b>
-                                          <b class="sub-tag ">Size : 2kg </b>
-                                      </div>
+                            @if (isset($order_details) && !empty($order_details))
+                                    @foreach ($order_details as $order)
+                                        <div class="row">
+                                            <div class="col-md-2 singleorderimg">
+                                                <a href="{{ route('web.product.single-product', ['slug' => $order->product->slug, 'id' => $order->product->id]) }}"><img src="{{ asset('images/products/'.$order->product->main_image.'') }}" alt=""></a>
+                                            </div>
+                                            <div class="col-md-10 singleordercontent"><a href="{{ route('web.product.single-product', ['slug' => $order->product->slug, 'id' => $order->product->id]) }}">{{ $order->product->name }}</a>
+                                                <div class="cart-price" style="text-align: left;">
+                                                    <div class="quantity">
+                                                    <p><small>₹{{ number_format($order->mrp, 2) }}</small> ₹{{ number_format($order->price, 2) }} </p> <b>|</b>
+                                                    <label style="margin-bottom: 0;">Quantity:</label>&nbsp;&nbsp;{{ $order->quantity }}
+                                                </div>
+                                                </div>
+                                                <div class="varient">
+                                                <b class="sub-tag spl">Size : {{ $order->size }} </b>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12" style=""><hr style="margin: 0"></div>
+                                            <div class="col-md-12 singleordercontent" style="padding: 10px 15px;">
+                                                <div class="varient">
+                                                <b class="sub-tag">Delivery Status : <strong>Delivered</strong> </b>
+                                                <a href="#" class="editproduct oth" style="margin-left: 10px">Return</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                            @else
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <span>No Orders Yet</span>
                                     </div>
-                                    <div class="varient">
-                                      <b class="sub-tag">Order Id : OD1452845 </b>
-                                      <b class="sub-tag spl">Order Date : 21/10/2020 </b>
-                                    </div>
                                 </div>
-                                <div class="col-md-12" style=""><hr style="margin: 0"></div>
-                                <div class="col-md-12 singleordercontent" style="padding: 10px 15px;">
-                                    <div class="varient">
-                                      <b class="sub-tag">Delivery Status : <strong>Delivered</strong> </b>
-                                      <a href="#" class="editproduct oth" style="margin-left: 10px">Return</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-12">
-                                  <span>No Orders Yet</span>
-                              </div>
-                            </div>
+                            @endif
                         </div>
                       <a href="{{route('web.index')}}" class="button">GO TO HOME</a>
                     </div>

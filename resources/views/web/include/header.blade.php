@@ -50,7 +50,7 @@
           <li> <a href="single_product.html"> <span>Single Product</span> </a> </li>
           <li> <a href="shopping_cart.html"> <span>Shopping Cart</span> </a> </li>
           <li><a href="checkout.html"><span>Checkout</span></a> </li>
-          <li> <a href="wishlist.html"> <span>Wishlist</span> </a> </li>
+          <li> <a href="{{ route('web.wishlist.wishlist') }}"> <span>Wishlist</span> </a> </li>
           <li><a href="compare.html"><span>Compare</span></a> </li>
           <li><a href="quick_view.html"><span>Quick View</span></a> </li>
           <li><a href="404error.html"><span>404 Error Page</span></a> </li>
@@ -186,18 +186,19 @@
           <div class="row">
             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 hidden-xs">
               <div class="search-box">
-                <form action="http://htmlmystore.justthemevalley.com/bigstart/cat" method="POST" id="search_mini_form" name="Categories">
-                  <input type="text" placeholder="Search entire store here..." value="Search" maxlength="70" name="search" id="search">
-                  <button type="button" class="search-btn-bg"><span class="glyphicon glyphicon-search"></span>&nbsp;</button>
+                <form action="{{ route('web.product.search') }}" method="POST" id="search_mini_form" name="Categories">
+                    @csrf
+                  <input type="text" placeholder="Search entire store here..." value="" maxlength="70" name="search" id="search">
+                  <button type="submit" class="search-btn-bg"><span class="glyphicon glyphicon-search"></span>&nbsp;</button>
                 </form>
               </div>
                 <div class="col-md-12" id="livesearch" style="display: none;">
                   <div class="row"><span class="triup glyphicon glyphicon-triangle-top"></span></div> 
-                  <div class="row livesrc"><div class="col-md-3"><a href="{{route('web.product.single-product')}}"><img src="{{asset('web/images/products/img03.jpg')}}" width="100"></a></div><div class="col-md-9"><p style="font-weight: bold;"><a href="{{route('web.product.single-product')}}">Home Decor</a></p><p>₹-1592.01</p></div></div>
+                  {{-- <div class="row livesrc"><div class="col-md-3"><a href="{{route('web.product.single-product')}}"><img src="{{asset('web/images/products/img03.jpg')}}" width="100"></a></div><div class="col-md-9"><p style="font-weight: bold;"><a href="{{route('web.product.single-product')}}">Home Decor</a></p><p>₹-1592.01</p></div></div>
                   <div class="row livesrc"><div class="col-md-3"><a href="{{route('web.product.single-product')}}"><img src="{{asset('web/images/products/img04.jpg')}}" width="100"></a></div><div class="col-md-9"><p style="font-weight: bold;"><a href="{{route('web.product.single-product')}}">Home Decor</a></p><p>₹-1592.01</p></div></div>
                   <div class="row livesrc"><div class="col-md-3"><a href="{{route('web.product.single-product')}}"><img src="{{asset('web/images/products/img05.jpg')}}" width="100"></a></div><div class="col-md-9"><p style="font-weight: bold;"><a href="{{route('web.product.single-product')}}">Home Decor</a></p><p>₹-1592.01</p></div></div>
                   <div class="row livesrc"><div class="col-md-3"><a href="{{route('web.product.single-product')}}"><img src="{{asset('web/images/products/img13.jpg')}}" width="100"></a></div><div class="col-md-9"><p style="font-weight: bold;"><a href="{{route('web.product.single-product')}}">Home Decor</a></p><p>₹-1592.01</p></div></div>
-                  <div class="row livesrc"><div class="col-md-3"><a href="{{route('web.product.single-product')}}"><img src="{{asset('web/images/products/img10.jpg')}}" width="100"></a></div><div class="col-md-9"><p style="font-weight: bold;"><a href="{{route('web.product.single-product')}}">Home Decor</a></p><p>₹-1592.01</p></div></div>
+                  <div class="row livesrc"><div class="col-md-3"><a href="{{route('web.product.single-product')}}"><img src="{{asset('web/images/products/img10.jpg')}}" width="100"></a></div><div class="col-md-9"><p style="font-weight: bold;"><a href="{{route('web.product.single-product')}}">Home Decor</a></p><p>₹-1592.01</p></div></div> --}}
                   {{-- No product --}}
                   <div class="row livesrc"><div class="col-md-12"><p style="font-weight: bold;text-align:center;margin: 9px 0;color: #327519;">No Product</p></div></div>
               </div>
@@ -211,52 +212,16 @@
               <div class="jtv-top-cart-box"> 
                 <!-- Top Cart -->
                 <div class="mini-cart">
-                  <div data-toggle="dropdown" data-hover="dropdown" class="basket dropdown-toggle"> <a href="shopping_cart.html"> <span class="cart_count">12</span></a> </div>
-                  <div>
-                    <div class="jtv-top-cart-content"> 
-                      
-                      
-                      <ul class="mini-products-list" id="cart-sidebar">
-                        <li class="item first">
-                          <div class="item-inner"> <a class="product-image" title="Product Title Here" ref="#"><img alt="Product Title Here" src="{{ asset('web/images/products/img01.jpg') }}"> </a>
-                            <div class="product-details">
-                              <div class="access"><a class="jtv-btn-remove" title="Remove This Item" href="#">Remove</a> <a class="btn-edit" title="Edit item" href="#"><i class="icon-pencil"></i><span class="hidden">Edit item</span></a> </div>
-                              <p class="product-name"><a href="#">Product Title Here</a> </p>
-                              <strong>1</strong> x <span class="price">$79.99</span> </div>
-                          </div>
-                        </li>
-                        <li class="item">
-                          <div class="item-inner"> <a class="product-image" title="Product Title Here" ref="single_product.html"><img alt="Product Title Here" src="{{ asset('web/images/products/img02.jpg') }}"> </a>
-                            <div class="product-details">
-                              <div class="access"><a class="jtv-btn-remove" title="Remove This Item" href="#">Remove</a> <a class="btn-edit" title="Edit item" href="#"><i class="icon-pencil"></i><span class="hidden">Edit item</span></a> </div>
-                              <p class="product-name"><a href="#">Product Title Here</a> </p>
-                              <strong>1</strong> x <span class="price">$88.89</span> </div>
-                          </div>
-                        </li>
-                        <li class="item last">
-                          <div class="item-inner"> <a class="product-image" title="Product Title Here" ref="single_product.html"><img alt="Product Title Here" src="{{ asset('web/images/products/img04.jpg') }}"> </a>
-                            <div class="product-details">
-                              <div class="access"><a class="jtv-btn-remove" title="Remove This Item" href="#">Remove</a> <a class="btn-edit" title="Edit item" href="#"><i class="icon-pencil"></i><span class="hidden">Edit item</span></a> </div>
-                              <p class="product-name"><a href="#">Product Title Here</a> </p>
-                              <strong>1</strong> x <span class="price">$85.99</span> </div>
-                          </div>
-                        </li>
-                      </ul>
-                      
-                      
-                      <div class="actions">
-                        <button class="btn-checkout" title="Checkout" type="button" onClick="checkout.html"><span>Checkout</span> </button>
-                        <a href="shopping_cart.html" class="view-cart"><span>View Cart</span></a> </div>
+                  <div class="basket"> <a href="{{ route('web.cart') }}"> <span class="cart_count">{{ $cart_count }}</span></a> </div>
+                </div>
+              </div>
+              @if(Auth::guard('web')->check())
+                <div class="jtv-top-cart-box hidden-xs"> 
+                    <div class="mini-cart">
+                    <div class="basket1"> <a href="{{ route('web.wishlist.wishlist') }}"> <span class="cart_count">{{ $wishlist_count }}</span></a> </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-              <div class="jtv-top-cart-box hidden-xs"> 
-                <!-- Top Wishlist -->
-                <div class="mini-cart">
-                  <div class="basket1"> <a href="wishlist.php"> <span class="cart_count">2</span></a> </div>
-                </div>
-              </div>
+              @endif
             </div>
           </div>
         </div>
@@ -272,108 +237,36 @@
             <div class="mm-toggle"><i class="fa fa-align-justify"></i><span class="mm-label">Menu</span> </div>
           </div>
           <div class="nav-inner"> 
-            <!-- BEGIN NAV -->          
             <ul class="menu">
               <li>Shop by Category</li>
               @forelse ($categories ?:[] as $category)
                 <li>
-                    <h3>{{ $category->name }}</h3>
                     @if(isset($category->subCategory))
-                    <div>
-                        <h4>{{ $category->name}}</h4>
-                        <span class="sub-menu">                    
-                            <ul>
-                                @foreach ($category->subCategory as $subCategory)
-                                    <li><a href="{{ route('web.product.product-list', ['slug' => $subCategory->slug, 'id' => $subCategory->id]) }}">{{ $subCategory->name }}</a></li>
-                                @endforeach
-                            </ul>
-                        </span>
-                        <span class="sub-menu">     
-                            <img src="{{ asset('images/category/category/'.$category->image) }}" alt="" height="200">
-                        </span>
-                      </div>
+                        @if (count($category->subCategory) > 0)
+                            <h3>{{ $category->name }}</h3>
+                        @else
+                            <a href="{{ route('web.product.product-list', ['slug' => $category->slug, 'id' => $category->id]) }}">{{ $category->name }}</a>
+                        @endif
+                        <div>
+                            <h4>{{ $category->name}}</h4>
+                            <span class="sub-menu">                    
+                                <ul>
+                                    @foreach ($category->subCategory as $subCategory)
+                                        <li><a href="{{ route('web.product.product-list', ['slug' => $subCategory->slug, 'id' => $subCategory->id]) }}">{{ $subCategory->name }}</a></li>
+                                    @endforeach
+                                </ul>
+                            </span>
+                            <span class="sub-menu">     
+                                <img src="{{ asset('images/category/category/'.$category->image) }}" alt="" height="200">
+                            </span>
+                        </div>
+                    @else
+                        <a href="#">{{ $category->name }}</a>
+                        <div>
+                            <h4>{{ $category->name}}</h4>
+                        </div>
                     @endif
                 </li>
-                {{--<li>
-                    <h3>Computer & Electronics</h3>
-                    <div>
-                    <h4>Books</h4>
-                    <span class="sub-menu">                    
-                        <ul>
-                        <li><a href="#">English</a></li>
-                        <li><a href="#">Dutch</a></li>
-                        <li><a href="#">German</a></li>
-                        <li><a href="#">French</a></li>
-                        <li><a href="#">Spanish</a></li>
-                        <li><a href="#">Turkish</a></li>
-                        <li><a href="#">Arabic</a></li>
-                        <li><a href="#">German</a></li>
-                        <li><a href="#">French</a></li>
-                        <li><a href="#">Spanish</a></li>
-                        <li><a href="#">Turkish</a></li>
-                        <li><a href="#">Arabic</a></li>
-                        </ul>
-                    </span>
-                    <span class="sub-menu">     
-                        <img src="web/images/menu-img3.jpg" alt="">
-                    </span>
-                    </div>
-                    </li>
-                    <li>
-                        <h3>Toys</h3>
-                        <div>
-                        <h4>Brands</h4>
-                        </div>
-                    </li>	
-                    <li>
-                        <h3>Sport & Leisure</h3>
-                        <div>
-                        <h4>Sport</h4>
-                        </div>
-                    </li>
-                    <li>
-                        <h3>Home & Cooking</h3>
-                        <div>
-                        <h4>Cooking</h4>
-                        </div>
-                    </li>	
-                    <li>
-                        <h3>Garden & DIY</h3>
-                        <div>
-                        <h4>Garden</h4>
-                        </div>
-                    </li>
-                    
-                    <li>
-                        <h3>Computer & Electronics</h3>
-                        <div>
-                        <h4>Smartphones</h4>
-                        </div>
-                    </li>
-                    <li>
-                        <h3>Toys</h3>
-                        <div>
-                        <h4>Brands</h4>
-                        </div>
-                    </li>	
-                    <li>
-                        <h3>Sport & Leisure</h3>
-                        <div>
-                        <h4>Sport</h4>
-                        </div>
-                    </li>
-                    <li>
-                        <h3>Home & Cooking</h3>
-                        <div>
-                        <h4>Cooking</h4>
-                        </div>
-                    </li>	
-                    <li>
-                        <h3>Garden & DIY</h3>
-                        <div>
-                        <h4>Garden</h4>
-                        </div>
-                </li> --}}
               @empty
                   <li>No Category Found!</li>
               @endforelse
@@ -382,10 +275,15 @@
             <li><a href="{{ route('web.index') }}">Home</a></li>
             <li><a href="#">Fashion Store</a></li>
             @if(Auth::guard('web')->check())
-                <li><a href="#"><i class="icon-user icons"></i>  Hello, {{ Auth::guard('web')->user()->name }}</a></li>
+            @php
+                $name = Auth::guard('web')->user()->name;
+                $name = explode(" ", $name);
+            @endphp
+                <li><a href="{{ route('web.profile.index') }}"><i class="icon-user icons"></i>  Hello, {{ $name[0] }}</a></li>
+                <li><a title="Checkout" href="{{ route('web.logout') }}">Logout</a> </li>
             @else
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Register</a></li>
+                <li><a href="{{ route('web.user.login') }}">Login</a></li>
+                <li><a href="{{ route('web.user.register') }}">Register</a></li>
             @endif
             </ul>
           </div>

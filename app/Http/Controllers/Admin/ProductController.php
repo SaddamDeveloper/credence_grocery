@@ -55,7 +55,7 @@ class ProductController extends Controller
         $product->sub_category_id = $request->input('sub_category');
         $product->product_type = $category->category_type;
         $product->description = $request->input('description');
-
+        $product->slug = Str::slug($request->input('name'));
         if ($product->save()) {
             /** Images Upload **/
             $path = base_path() . '/public/images/products/';
@@ -152,6 +152,12 @@ class ProductController extends Controller
                 } else {
                     $btn .= '<a href="' . route('admin.product_status_update', ['id' => $row->id, 1]) . '" class="btn btn-primary btn-sm" >Enable</a>';
                 }
+
+                if($row->is_popular == '1'){
+                    $btn .= '<a href="' . route('admin.make_popular', ['id' => encrypt($row->id), 'status' => 2]) . '" class="btn btn-info btn-sm">Make Popular</a>';
+                }else{
+                    $btn .= '<a href="' . route('admin.make_popular', ['id' => encrypt($row->id), 'status' => 1]) . '" class="btn btn-danger btn-sm">Remove Popular</a>';
+                }
                 return $btn;
             })->addColumn('category', function ($row) {
                 if (isset($row->category->name)) {
@@ -206,7 +212,20 @@ class ProductController extends Controller
 
         return redirect()->back()->with('message', 'Product Updated Successfully');
     }
-
+    public function makePopular($id, $status){
+        try {
+            $id = decrypt($id);
+        } catch (\Exception $e) {
+            abort(404);
+        }
+        $product = Product::find($id) ;
+        $product->is_popular = $status;
+        if($product->save()){
+            return redirect()->back()->with('message', 'Popular Product Updated Successfully');
+        }else {
+            return redirect()->back()->with('error', 'Something Went Wrong');
+        }
+    }
     public function editSizes($product_id)
     {
         $product = Product::where('id', $product_id)->first();

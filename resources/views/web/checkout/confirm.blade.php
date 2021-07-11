@@ -30,37 +30,43 @@
                       <div class="col-md-7"> 
                         <label style="font-weight: 700">Order Detail</label>                       
                         <div class="row singleorder">
-                          <div class="row">
-                              <div class="col-md-2 singleorderimg">
-                                  <a href="#"><img src="web/images/products/img02.jpg" alt=""></a>
-                              </div>
-                              <div class="col-md-10 singleordercontent" style="padding-top: 10px;">
-                                <a href="#">Royal velvet</a>
-                                <div class="cart-price" style="text-align: left;">
-                                    <div class="quantity">
-                                      <p><small>₹1025</small> ₹1025 </p> <b>|</b> 
-                                      <label class="" style="margin-bottom: 0;">Quantity:</label>&nbsp;&nbsp;2
-                                    </div>                                      
-                                </div>
-                                <div class="varient">
-                                  <b class="sub-tag">Color : <span style="background: blue"></span></b>
-                                  <b class="sub-tag spl">Size : L </b>
-                                </div>
-                              </div>
-                          </div>
+                            @if (isset($order) && !empty($order))
+                                @foreach ($order->orderDetails as $od)
+                                    @foreach ($product as $pr)
+                                        <div class="row">
+                                            <div class="col-md-2 singleorderimg">
+                                                <a href="{{ route('web.product.single-product', ['slug' => $pr->slug, 'id' => $pr->id]) }}">
+                                                    <img src="{{ asset('images/products/'.$pr->main_image.'') }}" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-md-10 singleordercontent" style="padding-top: 10px;">
+                                            <a href="{{ route('web.product.single-product', ['slug' => $pr->slug, 'id' => $pr->id]) }}">{{ $pr->name }}</a>
+                                            <div class="cart-price" style="text-align: left;">
+                                                <div class="quantity">
+                                                    <p><small>₹{{ number_format($od->quantity, 2) }}</small> ₹{{ number_format($od->price, 2) }} </p> <b>|</b> 
+                                                    <label class="" style="margin-bottom: 0;">Quantity:</label>&nbsp;&nbsp;{{ $od->quantity }}
+                                                </div>                                      
+                                            </div>
+                                            <div class="varient">
+                                                <b class="sub-tag spl">Size : {{ $od->size }} </b>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                @endforeach
+                            @endif
                         </div>
                       </div>
                       <div class="col-md-5"> 
                         <label style="font-weight: 700">Shipping</label>
                         <div class="single-address orderconfim">
                           <div class="single-address-content">
-                            <p>Name: Vishal nag</p>
-                            <p>Address: Greenwood Lane, lalganesh </p>
-                            <p>Email: imvishalnag@gmail.com </p>
-                            <p>Mobile No: 7800154260 </p>
-                            <p>City: Guwahati </p>
-                            <p>Pincode: 781034</p>
-                            <p></p>
+                            <p>Name: {{ $address->name }}</p>
+                            <p>Address: {{ $address->address }} </p>
+                            <p>Email: {{ $address->email }} </p>
+                            <p>Mobile No: {{ $address->mobile_no }} </p>
+                            <p>City: {{ $address->city }} </p>
+                            <p>Pincode: {{ $address->pin_code }}</p>
                           </div>
                         </div>
                       </div>
@@ -71,27 +77,7 @@
                     </div>
               </div>
             </article>
-            <!--  ///*///======    End article  ========= //*/// --> 
           </div>
-          {{-- <div class="sidebar col-sm-3 col-xs-12">
-            <aside class="sidebar">
-              <div class="block-title" style="border-bottom: 0">PAYMENT INFORMATION</div>
-              <div class="cartcalculation">
-                <div class="paymttotal">
-                  <h4 style="text-align: left;">Cart Amount  </h4>
-                  <h4 style="text-align: right;" id="total">{{ Cart::subtotal() }}</h4>
-                </div>
-                <div class="paymttotal">
-                  <h4 style="text-align: left;">Shipping  </h4>
-                  <h4 style="text-align: right;" id="total">30</h4>
-                </div>
-                <div class="paymttotal">
-                  <h4 style="text-align: left;font-weight: 700;border-bottom:0;">Grand Total </h4>
-                  <h4 style="text-align: right;font-weight: 700;border-bottom:0;" id="total">{{ Cart::subtotal() }}</h4>
-                </div>
-              </div>
-            </aside>
-          </div> --}}
         </div>
       </div>
     </section>

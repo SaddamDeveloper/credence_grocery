@@ -16,7 +16,6 @@ class LoginController extends Controller
 
     public function adminLogin(Request $request, Guard $guard)
     {
-
         $this->validate($request, [
             'email'   => 'required|email',
             'password' => 'required|min:6'
@@ -27,7 +26,7 @@ class LoginController extends Controller
             'password'  => $request->input('password'),
         );
 
-        if (Auth::guard('admin')->attempt($credentials)) {
+        if(Auth::guard('admin')->attempt($credentials)) {
 
             return redirect()->intended('/admin/dashboard');
         }

@@ -17,23 +17,33 @@
                 <h2>My profile</h2>
               </div>
               <div class="static-contain">
-                <h2>Vishal Nag</h2><hr>
-                <div class="row">
-                  <div class="col-xs-6">
-                    <p><strong>Name : </strong>Vishal Nag</p> 
-                    <p><strong>Email : </strong>imvis@gmail.com</p> 
-                    <p><strong>Phone No : </strong>+91 94568 945125</p>
+                <h2>{{ Auth::guard('web')->user()->name }}</h2><hr>
+                @forelse ($addresses ?: [] as $address)
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <p><strong>Name : </strong>{{ $address->name }}</p> 
+                      <p><strong>Email : </strong>{{ $address->email }}</p> 
+                      <p><strong>Phone No : </strong>+91 {{ $address->mobile }}</p>
+                      <p><strong>Address : </strong>{{ $address->address }}</p>
+                      <p><strong>State : </strong>{{ $address->state }}</p>
+                      <p><strong>City : </strong>{{ $address->city }}</p>
+                      <p><strong>Pin : </strong>{{ $address->pin }}</p>
+                    </div>
+                    <div class="col-xs-12"><hr></div>
+                    <div class="col-xs-6">
+                      <label class="hidden-xs">You can edit your profile</label><br>
+                      <a href="{{route('web.profile.edit-profile')}}" class="button button--aylen btn">EDIT PROFILE</a>
+                    </div>
+                    <div class="col-xs-6">
+                      <label class="hidden-xs">Check your saved shipping address</label><br>
+                      <a href="{{route('web.address.address')}}" class="button button--aylen btn">SAVED ADDRESS</a>
+                    </div>
                   </div>
-                  <div class="col-xs-12"><hr></div>
-                  <div class="col-xs-6">
-                    <label class="hidden-xs">You can edit your profile</label><br>
-                    <a href="{{route('web.profile.edit-profile')}}" class="button button--aylen btn">EDIT PROFILE</a>
-                  </div>
-                  <div class="col-xs-6">
-                    <label class="hidden-xs">Check your saved shipping address</label><br>
-                    <a href="{{route('web.address.address')}}" class="button button--aylen btn">SAVED ADDRESS</a>
-                  </div>
-                </div>
+                @empty
+                    <div class="row text-center">
+                      <span>No Address Found!</span>
+                    </div>
+                @endforelse
               </div>
             </div>
           </section>
@@ -43,7 +53,7 @@
               <div class="block-content">
                 <ol id="recently-viewed-items">
                   <li class="item odd"><a href="{{ route('web.wishlist.wishlist') }}">Wishlist</a></li>
-                  <li class="item  odd"><a href="{{route('web.order.order')}}">My Orders</a></li>
+                  <li class="item  odd"><a href="{{route('web.order.order-list')}}">My Orders</a></li>
                   <li class="item odd"><a href="{{route('web.profile.edit-profile')}}">Edit Profile</a></li>
                   <li class="item odd"><a href="{{route('web.address.address')}}">My Address</a></li>
                   <li class="item last"><a href="{{route('web.profile.change-password')}}">Change password</a></li>

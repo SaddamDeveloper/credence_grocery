@@ -16,10 +16,16 @@
               <div class="account-login register-login">
                   <fieldset class="col2-set">
                       <div class="new-users"><strong>Register</strong>
-                          <div class="content">
-                              <p style="font-weight: bolder; color: #f10000;">Somthing went wrong, please try again</p>
+                        <div class="content">
+                            @if (Session::has('message'))
+                              <div class="alert alert-success text-center" >{{ Session::get('message') }}</div>
+                            @endif
+                            @if (Session::has('error'))
+                                <div class="alert alert-danger text-center">{{ Session::get('error') }}</div>
+                            @endif
                               <p>If you don't have an account with us, please register in.</p>
-                            <form action="{{ route('web.user.register') }}" autocomplete="off">
+                            <form action="{{ route('web.register') }}" method="POST" autocomplete="off">
+                                @csrf
                               <ul class="form-list">
                                 <li>
                                     <div class="row">
@@ -44,10 +50,10 @@
                                             @enderror
                                         </div>
                                         <div class="col-sm-6">
-                                            <label for="contact_no">Phone Number <span class="required">*</span></label>
+                                            <label for="mobile">Phone Number <span class="required">*</span></label>
                                             <br>
-                                            <input type="number" class="input-text required-entry" value="{{ old('contact_no') }}" name="contact_no">
-                                            @error('contact_no')
+                                            <input type="number" class="input-text required-entry" value="{{ old('mobile') }}" name="mobile">
+                                            @error('mobile')
                                               <span style="color: red;">{{ $message }}</span>
                                             @enderror 
                                         </div>

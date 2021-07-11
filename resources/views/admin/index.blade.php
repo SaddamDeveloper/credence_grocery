@@ -39,7 +39,7 @@
                   <div class="alert alert-danger" >{{ Session::get('error') }}</div>
               @endif
           </div>
-            {{ Form::open(array('url' => 'login', 'method' => 'post')) }}
+            {{ Form::open(array('url' => 'admin/login', 'method' => 'post')) }}
 
               <h1>Admin Login Form</h1>
               <div>

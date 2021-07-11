@@ -23,22 +23,15 @@
                             <h2 class="text-center" style="padding: 0">Shipping Information</h2>
                           </div>   
                           <div class="checkout-page">
-
-                            {{-- @if (session()->has('msg'))
-                              <h5 class="text-center">{{ session()->get('msg') }}</h5> 
-                            @else --}}
-                              <h5 class="text-center">Edit Shipping Address</h5> 
-                            {{-- @endif --}}
-
+                              <h5 class="text-center">Add Shipping Address</h5> 
                             <div class="box-border">
-                            <form method="POST" action="{{ route('web.address.update') }}">
+                            <form method="POST" action="{{ route('web.address.add') }}">
                               @csrf
-                              <input type="hidden" value="{{ $address->id}}" name="id">
                               <ul>
                                 <li class="row">
                                   <div class="col-sm-6">
                                     <label for="first_name" class="required">Name</label>
-                                  <input type="text" value="{{ $address->name }}" class="input form-control" name="name" id="name">
+                                  <input type="text" value="{{ old('name') }}" placeholder="Enter Name" class="input form-control" name="name" id="name">
                                     @if($errors->has('name'))
                                         <span id="name_msg" style="color:red">
                                             <strong>{{ $errors->first('name') }}</strong>
@@ -48,7 +41,7 @@
                                   <!--/ [col] -->
                                   <div class="col-sm-6">
                                     <label for="email_address" class="required">Email Address</label>
-                                    <input type="email" class="input form-control" value="{{ $address->email }}" name="email" id="email_address">
+                                    <input type="email" class="input form-control" value="{{ old('email') }}" placeholder="Enter Email address" name="email" id="email_address">
                                     @if($errors->has('email'))
                                         <span id="email_msg" style="color:red">
                                             <strong>{{ $errors->first('email') }}</strong>
@@ -61,21 +54,18 @@
                                 <li class="row">
                                   <div class="col-xs-12">
                                     <label for="address" class="required">Address</label>
-                                    <textarea class="input form-control form-area" name="address" id="address" rows="10">{{ $address->address }}</textarea>
+                                    <textarea class="input form-control form-area" name="address" id="address" placeholder="Enter Address" rows="10">{{ old('address') }}</textarea>
                                     @if($errors->has('address'))
                                         <span id="address_msg" style="color:red">
                                             <strong>{{ $errors->first('address') }}</strong>
                                         </span>
                                     @enderror
                                   </div>
-                                  <!--/ [col] --> 
-                                  
                                 </li>
-                                <!-- / .row -->
                                 <li class="row">
                                   <div class="col-sm-6">
                                     <label for="telephone">Phone Number</label>
-                                    <input type="number" name="mobile" value="{{ $address->mobile }}" class="input form-control">
+                                    <input type="number" name="mobile" value="{{ old('mobile') }}" placeholder="Enter Mobile No" class="input form-control">
                                     @if($errors->has('mobile'))
                                         <span id="mobile_msg" style="color:red">
                                             <strong>{{ $errors->first('mobile') }}</strong>
@@ -85,41 +75,35 @@
                                   <!--/ [col] -->
                                   <div class="col-sm-6">
                                     <label for="postal_code" class="required">Pincode</label>
-                                    <input type="number" class="input form-control" value="{{ $address->pin }}" name="pin">
+                                    <input type="number" class="input form-control" value="{{ old('pin') }}" placeholder="Enter Pin" name="pin">
                                     @if($errors->has('pin'))
                                         <span id="pin_msg" style="color:red">
                                             <strong>{{ $errors->first('pin') }}</strong>
                                         </span>
                                     @enderror
                                   </div>
-                                  <!--/ [col] --> 
                                 </li>
-                                <!--/ .row -->
-                                
                                 <li class="row">
                                   <div class="col-sm-6">
                                     <label for="city" class="required">City</label>
-                                    <input class="input form-control" type="text" value="{{ $address->city }}" name="city" id="city">
+                                    <input class="input form-control" type="text" value="{{ old('city') }}" placeholder
+                                    ="Enter City" name="city" id="city">
                                     @if($errors->has('city'))
                                         <span id="city_msg" style="color:red">
                                             <strong>{{ $errors->first('city') }}</strong>
                                         </span>
                                     @enderror
                                   </div>
-                                  <!--/ [col] -->
-                                  
                                   <div class="col-sm-6">
                                     <label class="required">State/Province</label>
-                                    <input type="text" class="input form-control" value="{{ $address->state }}" name="state" id="state">
+                                    <input type="text" class="input form-control" value="{{ old('state') }}" name="state" id="state" placeholder="Enter State">
                                     @if($errors->has('state'))
                                         <span id="state_msg" style="color:red">
                                             <strong>{{ $errors->first('state') }}</strong>
                                         </span>
                                      @enderror
                                   </div>
-                                  <!--/ [col] --> 
                                 </li>
-                                <!--/ .row -->
                                 <li>
                                   <a href="{{route('web.address.address')}}" class="button button1" style="padding: 4px 12px;border-width: 1px;">Back</a>
                                   <button type="submit" class="button button-clear" id="address_btn">Save</button>

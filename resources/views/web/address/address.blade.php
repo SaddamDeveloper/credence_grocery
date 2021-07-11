@@ -24,45 +24,34 @@
                             </div>                            
                             <div class="col2-set" id="select-address">
                               <h5 class="text-center">Saved Address</h5>
-                              <div class="col-1">
-                                <div class="single-address flex">
-                                  <div class="single-address-content">
-                                    <p>Vishal Nag</p>
-                                    <p>784, Rose Garden, Downtown</p>
-                                    <p>Guwahati, ASSAM</p>
-                                    <p>Pincode: 784125</p>
-                                    <p>Phone: 4565456233 | Email: im@vsishal.com</p>
-                                    <a href="{{route('web.address.edit-address')}}" title="">EDIT THIS ADDRESS</a>
-                                  </div>
+                                @if (Session::has('message'))
+                                    <div class="alert alert-success" >{{ Session::get('message') }}</div>
+                                @endif
+                                @if (Session::has('error'))
+                                    <div class="alert alert-danger">{{ Session::get('error') }}</div>
+                                @endif
+                              @forelse ($addresses ?: [] as $address)
+                                <div class="col-1">
+                                    <div class="single-address flex">
+                                    <div class="single-address-content">
+                                        <p>{{ $address->name }}</p>
+                                        <p>{{ $address->address }}</p>
+                                        <p>{{ $address->city }}</p>
+                                        <p>{{ $address->state }}</p>
+                                        <p>Pincode: {{ $address->pin }}</p>
+                                        <p>Phone: {{ $address->mobile }} | Email: {{ $address->email }}</p>
+                                        <a href="{{route('web.address.edit-address', ['id' => encrypt($address->id)])}}" title="">EDIT THIS ADDRESS</a>
+                                    </div>
+                                    </div>
                                 </div>
-                              </div>
-                              <div class="col-1">
-                                <div class="single-address flex">
-                                  <div class="single-address-content">
-                                    <p>Vishal Nag</p>
-                                    <p>56B, XYZ Colony</p>
-                                    <p>Kolkata, WEST BENGAL</p>
-                                    <p>Pincode: 784125</p>
-                                    <p>Phone: 4565456233 | Email: im@vsishal.com</p>
-                                    <a href="{{route('web.address.edit-address')}}" title="">EDIT THIS ADDRESS</a>
-                                  </div>
+                              @empty
+                                <div class="col-1">
+                                    No Address Found!
                                 </div>
-                              </div>
-                              <div class="col-1">
-                                <div class="single-address flex">
-                                  <div class="single-address-content">
-                                    <p>Vishal Nag</p>
-                                    <p>784, B town, Domvali</p>
-                                    <p>Mumbai, MAHARASTRA</p>
-                                    <p>Pincode: 784125</p>
-                                    <p>Phone: 4565456233 | Email: im@vsishal.com</p>
-                                    <a href="{{route('web.address.edit-address')}}" title="">EDIT THIS ADDRESS</a>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="manage_add" onclick="myFunction()"><h5 class="text-center">Add New Shipping Addresses</h5> </div>
+                              @endforelse
+                              <a class="manage_add" href="{{ route('web.address.add_address') }}"><h5 class="text-center">Add New Shipping Addresses</h5></a>
                             </div>
-                            <div class="checkout-page" id="add-address" style="display: none;">
+                            {{-- <div class="checkout-page" id="add-address" style="display: none;">
                               <h5 class="text-center">Add New Address</h5>   
                               <div class="box-border">
                               <form method="POST" action="#" autocomplete="off">
@@ -132,7 +121,7 @@
                                 </ul>
                                 </form>
                               </div>
-                            </div>                            
+                            </div>                             --}}
                           </div>
                         </div>
                     </div>

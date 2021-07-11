@@ -134,6 +134,51 @@
 
   var iid1 = "countbox_1";
   CountBack_slider(gsecs1, "countbox_1", 1);
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $('#search').keyup(function(){
+            var keyword = $('#search').val();
+
+            if (keyword.length == 0) {
+                $('#livesearch').hide();
+            } else {
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                });
+
+                $.ajax({
+                    method: "GET",
+                    url   : "{{ url('/product-search/') }}/"+keyword,
+                    success: function(response) {
+
+                        if (response == ""){
+                              $('#livesearch').html("<div style='background: #ffffff05; text-lign: center;'><img src='{{asset('web/images/not-found.jpg')}}' style='max-width: 100%'><strong>Sorry !!</strong> couldn\'t find what your are looking for...</div>");
+                        }
+                        else
+                            $('#livesearch').html(response);
+
+                        $('#livesearch').show();
+                    }
+                });
+            }
+        });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function(){
+      $("#this-togg").click(function(){
+        $(".search-box").toggleClass("disply-blk");    
+        $(".mm-toggle1").toggleClass("closeit");
+        $(".closeit").click(function(){
+          $("#livesearch").css("display", "none");
+        });
+        
+      });
+    });
   </script> 
   @stack('script')
 </body>

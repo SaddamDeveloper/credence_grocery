@@ -17,39 +17,53 @@
                 <div class="row">
                   <div class="category-products">
                       <ul class="products-grid row">
-                        <li class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                          <div class="item">
-                            <div class="item-inner">
-                              <div class="item-img">
-                                <div class="item-img-info"> <a class="product-image" title="Product Title Here" href="{{route('web.product.single-product')}}"> <img alt="Product Title Here" src="web/images/products/img06.jpg"> </a>
-                                </div>
-                              </div>
-                              <div class="item-info">
-                                <div class="info-inner">
-                                  <div class="item-title"> <a title="Product Title Here" href="{{route('web.product.single-product')}}"> Product Title Here </a> </div>
-                                  <div class="item-content">
-                                    <div class="item-price">
-                                      <div class="price-box">
-                                        <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> ₹156.00 </span> </p>
-                                        <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> ₹167.00 </span> </p>
-                                      </div>
+                        @if (isset($wish_data) && !empty($wish_data) && count((array)$wish_data) > 0 )
+                            @foreach ($wish_data as $wish_list)
+                                <li class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                    <div class="item">
+                                        <div class="item-inner">
+                                        <div class="item-img">
+                                            <div class="item-img-info"> <a class="product-image" title="{{ $wish_list['title'] }}" href="#"> <img alt="{{ $wish_list['title'] }}" src="images/products/{{ $wish_list['image'] }}"> </a>
+                                            </div>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="info-inner">
+                                            <div class="item-title"> <a title="{{ $wish_list['title'] }}" href="#"> {{ $wish_list['title'] }} </a> </div>
+                                            <div class="item-content">
+                                                <div class="item-price">
+                                                <div class="price-box">
+                                                    <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> ₹{{ number_format($wish_list['price'], 2) }} </span> </p>
+                                                    <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> ₹{{ number_format($wish_list['mrp'], 2) }} </span> </p>
+                                                </div>
+                                                </div>
+                                                <div class="action">
+                                                <a class="link-wishlist" href="{{ route('web.delete_wish_list',['list_id' => encrypt($wish_list['wish_id'])]) }}"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
+                                                <a href="{{ route('web.move_wish_list',['list_id' => encrypt($wish_list['wish_id'])]) }}" class="button btn-cart" type="button" title="" data-original-title="Add to Cart"><span><i class="fa fa-plus"></i> Move to Cart</span> </a>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        </div>
                                     </div>
-                                    <div class="action">
-                                      <a class="link-wishlist" href="wishlist.html"><i class="icon-heart icons"></i><span class="hidden">Wishlist</span></a>
-                                      <button class="button btn-cart" type="button" title="" data-original-title="Add to Cart"><span>View Detail</span> </button>
+                                </li>
+                            @endforeach
+                        @else
+                        <link class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="item">
+                                <div class="emptycrt text-center">
+                                    <p class="emplty-div" style="margin: 50px 0 0">Wishlist is Empty</p>
+                                    <div>                                
+                                        <a href="{{ route('web.index') }}" class="button" style="margin: 30px 0 0">Continue Shopping</a>
                                     </div>
-                                  </div>
                                 </div>
-                              </div>
                             </div>
-                          </div>
                         </li>
+                        @endif
                       </ul>
                   </div>
                 </div>
               </div>
             </article>
-            <!--  ///*///======    End article  ========= //*/// --> 
           </div>
         </div>
       </div>

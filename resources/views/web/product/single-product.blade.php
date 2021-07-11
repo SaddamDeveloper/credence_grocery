@@ -1,7 +1,5 @@
 ﻿@extends('web.templet.master')
 
-  {{-- @include('web.include.seo') --}}
-
   @section('seo')
     <meta name="description" content="Credence">
   @endsection
@@ -9,8 +7,10 @@
   @section('content')
 
   @php
-      $min_size = $product->minSize;
-      $min_size = $min_size[0];
+    if(isset($product) && !empty($product)){
+        $min_size = $product->minSize;
+        $min_size = $min_size[0];
+    }
   @endphp
     <!-- Main Container -->
     <section class="main-container col1-layout">
@@ -20,11 +20,13 @@
             <div class="col-main">
               <div class="product-view">
                 <div class="product-essential">
-                  <form action="#" method="post" id="product">
+                  <form action="{{ route('web.add_cart') }}" method="POST" autocomplete="off" id="product">
+                    @csrf
                     <div class="product-img-box col-lg-5 col-sm-6 col-xs-12">
-                        @if ($product->created_at == \Carbon\Carbon::today())
+                        @if (isset($product->created_at) == \Carbon\Carbon::today())
                             <div class="new-label new-top-left"> New </div>
-                        @endif
+                            @endif
+                            <div class="new-label new-top-left"> Popular </div>
                       <div class="product-image">
                         <div class="product-full"> <img id="product-zoom" src="{{ asset('images/products/'.$product->main_image) }}" data-zoom-image="{{ asset('images/products/'.$product->main_image) }}" alt="product-image"/> </div>
                         <div class="more-views">
@@ -41,7 +43,6 @@
                           </div>
                         </div>
                       </div>
-                      <!-- end: more-images --> 
                     </div>
                     <div class="product-shop col-lg-7 col-sm-6 col-xs-12">
                       <div class="product-name">
@@ -49,13 +50,12 @@
                       </div>
                       <div class="price-block">
                         <div class="price-box">
-                          <p class="special-price"> <span class="price-label">Special Price</span> <span id="product-price-48" class="price"> ₹{{ number_format($product->mrp, 2) }} </span> </p>
-                          <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> ₹{{ number_format($product->min_price, 2) }} </span> </p>
+                          <p class="special-price"> <span class="price-label">Special Price</span> <span id="product-price-48" class="price"> ₹{{ number_format($min_size->price, 2) }} </span> </p>
+                          <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> ₹{{ number_format($min_size->mrp, 2) }} </span> </p>
                         </div>
                       </div>
                       <div class="info-orther">
                         <p>Availability: 
-                            {{-- {{ dd($product->size) }} --}}
                             @if ($min_size->stock > 0)
                                 <span class="in-stock">In stock</span>
                             @else
@@ -77,38 +77,18 @@
                                     @foreach ($product->sizes as $sizes)
                                       @if ($min_size->id == $sizes->id)
                                         <li class="col-sel size-sel selected">
-                                          <span>{{ $sizes->size }} KG</span>
+                                          <span>{{ $sizes->size }} {{ $sizes->sizeType->name }}</span>
                                           <input type="radio" name="product_size_id" value="{{ $sizes->id }}" hidden="" checked>
                                         </li>
                                       @else
                                         <li class="col-sel size-sel">
-                                          <span>{{ $sizes->size }} KG</span>
+                                          <span>{{ $sizes->size }} {{ $sizes->sizeType->name }}</span>
                                           <input type="radio" name="product_size_id" value="{{ $sizes->id }}" hidden="">
                                         </li>
                                       @endif
                                        
                                     @endforeach
                                 @endif
-                              {{-- <li class="col-sel size-sel">
-                                <span>S</span>
-                                <input type="radio" name="product_size_id" value="13" checked="" hidden="">
-                              </li>
-                              <li class="col-sel size-sel">
-                                <span>M</span>
-                                <input type="radio" name="product_size_id" value="13" checked="" hidden="">
-                              </li>
-                              <li class="col-sel size-sel selected">
-                                <span>L</span>
-                                <input type="radio" name="product_size_id" value="13" checked="" hidden="">
-                              </li>
-                              <li class="col-sel size-sel">
-                                <span>XL</span>
-                                <input type="radio" name="product_size_id" value="13" checked="" hidden="">
-                              </li>
-                              <li class="col-sel size-sel">
-                                <span>XXL</span>
-                                <input type="radio" name="product_size_id" value="14" hidden="">
-                              </li> --}}
                             </ul>
                           </div>
                         </div>
@@ -122,11 +102,16 @@
                                 <button onClick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty )) result.value++;return false;" class="increase items-count" type="button"><i class="fa fa-plus">&nbsp;</i></button>
                               </div>
                             </div>
-                            <button onClick="productAddToCartForm.submit(this)" class="button btn-cart" title="Add to Cart" type="button">Add to Cart</button>
+                            @if(isset($min_size->stock) && ($min_size->stock > 0))
+                                <input type="hidden" value="{{ $product->id }}" name="product_id">
+                                <button class="button btn-cart" title="Add to Cart" type="submit">Add to Cart</button>
+                            @else
+                                <button class="button btn-cart" title="Out of Stock" type="button" disabled>Out of Stock</button>
+                            @endif
                           </div>
                           <div class="email-addto-box">
                             <ul class="add-to-links">
-                            <li> <a class="link-wishlist" href="{{route('web.cart.cart')}}"><span>Add to Wishlist</span></a></li>
+                            <li> <a class="link-wishlist" href="{{route('web.cart')}}"><span>Add to Wishlist</span></a></li>
                             </ul>
                           </div>
                         </div>
@@ -453,24 +438,11 @@
             method: "POST",
             url   : "{{ url('product-price-check') }}",
             data  : {
+                "_token": "{{ csrf_token() }}",
                 'stock_id': product_size_id
             },
             success: function(response) {
-
-                var response = response.split(',');
-                var price = response[0];
-                var discount = response[1];
-
-                if (price != "") {
-
-                    if (discount != 0) {
-
-                        $('.price-box').html('<p class=\"old-price\"><span class=\"price-label\">Special Price</span><span id=\"product-price-48\" class=\"price\">₹'+parseFloat(price).toFixed(2)+'</span></p>&nbsp;<p class=\"special-price\"><span class=\"price-label\">Regular Price:</span><span class=\"price\"> ₹'+parseFloat(discount).toFixed(2)+' </span> </p>');
-                    } else {
-
-                        $('.price-box').html('<p class=\"special-price\"> <span class=\"price-label\">Special Price</span> <span id=\"product-price-48\" class=\"price\"> ₹'+parseFloat(price).toFixed(2)+' </span> </p>');
-                    }
-                }
+                $(".price-box").html(response);
             }
         });
 

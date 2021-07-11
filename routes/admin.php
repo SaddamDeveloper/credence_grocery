@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['namespace' => 'Admin'],function(){
     Route::get('/admin/login','LoginController@index')->name('admin.login_form');
-    Route::post('login', 'LoginController@adminLogin');
+    Route::post('/admin/login', 'LoginController@adminLogin');
 
 
     Route::group(['middleware'=>'auth:admin','prefix'=>'admin'],function(){
@@ -51,6 +51,8 @@ Route::group(['namespace' => 'Admin'],function(){
             Route::post('add/new/images/','ProductController@addNewImages')->name('admin.product_add_new_images');
             Route::get('make/cover/image/{product_id}/{image_id}','ProductController@makeCoverImage')->name('admin.product_make_cover_image');
             Route::get('delete/image/{image_id}','ProductController@deleteImage')->name('admin.product_delete_image');
+            
+            Route::get('make/popular/{id}/{status}','ProductController@makePopular')->name('admin.make_popular');
 
             Route::group(['prefix' => 'meat'], function () {
                 Route::get('add/form','ProductController@AddMeatForm')->name('admin.meat_add_form');

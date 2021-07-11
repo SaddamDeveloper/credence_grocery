@@ -15,18 +15,23 @@
             <div class="col-md-4" style="margin: auto;">
               <div class="account-login register-login">
                   <fieldset class="col2-set">
+                    @if (Session::has('message'))
+                      <div class="alert alert-success text-center" >{{ Session::get('message') }}</div>
+                    @endif
+                    @if (Session::has('error'))
+                        <div class="alert alert-danger text-center">{{ Session::get('error') }}</div>
+                    @endif
                       <div class="new-users"><strong>Login</strong>
                           <div class="content">
-                              <p style="font-weight: bolder; color: #f10000;">Please login again</p>
                               <p>If you have an account with us, please log in.</p>
                             
-                              <form action="" autocomplete="off" method="POST">
+                              <form action="{{ route('web.login') }}" autocomplete="off" method="POST">
                                 @csrf
                                   <ul class="form-list">
                                       <li>
-                                          <label for="email">Email or Mobile No  <span class="required">*</span></label>
+                                          <label for="username">Email or Mobile No  <span class="required">*</span></label>
                                           <br>
-                                          <input type="text" title="Mobile No" class="input-text required-entry" id="email" value="" name="username">
+                                          <input type="text" title="Mobile No" class="input-text required-entry" id="username" value="" name="username">
                                       </li>
                                       <li>
                                           <label for="pass">Password <span class="required">*</span></label>

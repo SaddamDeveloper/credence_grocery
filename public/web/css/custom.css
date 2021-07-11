@@ -608,3 +608,9 @@ padding-left: 0
 .jtv-mobile-menu li:nth-child(1) { 
 margin-top: 50px;
 } 
+.emplty-div {
+  font-size: 30px;
+  color: #327519;
+  font-weight: 900;
+  text-transform: uppercase;
+}
